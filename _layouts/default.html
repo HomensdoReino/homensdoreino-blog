@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}">Homens do Reino</a></h1>
+    <nav>
+      <a href="{{ '/about' | relative_url }}">Sobre</a>
+      <a href="{{ '/radio' | relative_url }}">Rádio</a>
+    </nav>
+  </header>
 
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>&copy; {{ 'now' | date: "%Y" }} Homens do Reino. Todos os direitos reservados à Palavra de Deus.</p>
+  </footer>
+</body>
+</html>
