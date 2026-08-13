@@ -1,0 +1,16 @@
+# Configurações do Jekyll
+title: Homens do Reino
+email: contato@homensdoreino.com.br
+description: >-
+  Erguendo homens segundo o evangelho de Cristo Jesus, Filho do Deus vivo.
+baseurl: ""
+url: "https://homensdoreino.com.br"
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
