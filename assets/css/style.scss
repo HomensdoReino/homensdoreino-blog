@@ -1,0 +1,67 @@
+---
+# Este traço vazio é obrigatório no Jekyll para SCSS
+---
+
+// Cores medievais
+$wood-bg: #f5e9d9;
+$wood-dark: #5d4037;
+$text-dark: #3e2723;
+$accent-gold: #d4af37;
+
+body {
+  background-color: $wood-bg;
+  font-family: 'Garamond', 'Times New Roman', serif;
+  color: $text-dark;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: $wood-dark;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+header h1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+header nav {
+  margin-top: 0.5rem;
+}
+header nav a {
+  color: #f5e9d9;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.post-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.versiculo {
+  font-style: italic;
+  color: $wood-dark;
+  border-left: 4px solid $accent-gold;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.1em;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: $wood-dark;
+  font-size: 0.9em;
+}
