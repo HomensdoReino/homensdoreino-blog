@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="post">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="versiculo">{{ page.versiculo }}</p>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d de %B de %Y" }}</time>
+  </header>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
