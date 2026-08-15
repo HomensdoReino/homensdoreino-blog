@@ -1,0 +1,19 @@
+---
+layout: default
+title: Homens do Reino
+---
+
+<div class="hero">
+  <h2>Erguendo homens segundo o evangelho de Cristo Jesus</h2>
+  <p>O Filho do Deus vivo nos chamou para restaurar o propósito do homem na terra.</p>
+</div>
+
+<h3>Últimos Artigos</h3>
+<ul>
+  {% for post in site.posts limit:3 %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <br><small>{{ post.date | date: "%d/%m/%Y" }} — {{ post.versiculo }}</small>
+    </li>
+  {% endfor %}
+</ul>
