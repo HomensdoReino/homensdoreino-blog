@@ -271,6 +271,120 @@ header nav a {
   }
 }
 
+// GRID DE PILARES
+.pilares-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin: 3rem 0;
+}
+
+.pilar-section {
+  background: linear-gradient(135deg, rgba(62, 39, 35, 0.4) 0%, rgba(44, 24, 16, 0.6) 100%);
+  border: 3px solid $metal;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+.pilar-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid $gold;
+}
+
+.pilar-numero {
+  display: inline-block;
+  background: $gold;
+  color: $wood-dark;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.pilar-titulo {
+  color: $gold;
+  font-family: $font-header;
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.pilar-versiculo {
+  color: $parchment;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card-artigo {
+  background: linear-gradient(135deg, $wood-medium 0%, $wood-light 100%);
+  border: 2px solid $metal;
+  border-radius: 12px;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '✝';
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: $gold;
+    font-size: 1.2rem;
+    opacity: 0.5;
+  }
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.7);
+    border-color: $gold;
+  }
+}
+
+.card-conteudo h3 {
+  color: $gold;
+  font-family: $font-header;
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  padding-right: 2rem;
+  line-height: 1.3;
+}
+
+.card-conteudo p {
+  color: $parchment;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.card-link {
+  display: inline-block;
+  color: $gold;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-bottom: 2px solid $gold;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: $gold-light;
+    border-color: $gold-light;
+  }
+}
+
 // FOOTER MEDIEVAL
 footer {
   background: linear-gradient(135deg, $wood-dark 0%, $wood-medium 100%);
@@ -302,6 +416,18 @@ footer {
   
   .post-title {
     font-size: 1.4rem;
+  }
+  
+  .pilar-section {
+    padding: 1.5rem;
+  }
+  
+  .pilar-titulo {
+    font-size: 1.6rem;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
   }
 }
 
