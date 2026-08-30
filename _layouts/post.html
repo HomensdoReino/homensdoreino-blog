@@ -1,13 +1,28 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p class="versiculo">{{ page.versiculo }}</p>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d de %B de %Y" }}</time>
+
+<article class="post-single">
+  <header style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="color: {{ site.data.colors.gold }}; font-family: {{ site.data.fonts.header }}; font-size: 2.5rem; margin-bottom: 1rem;">{{ page.title }}</h1>
+    <div class="post-meta" style="justify-content: center; font-size: 1rem;">
+      <time datetime="{{ page.date }}">{{ page.date | date: "%d de %B de %Y" }}</time>
+      <span>·</span>
+      <span>{{ page.versiculo }}</span>
+    </div>
   </header>
-  <div class="post-content">
+  
+  {% if page.image %}
+  <img src="{{ page.image }}" alt="{{ page.title }}" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 2rem; border: 3px solid {{ site.data.colors.metal }};">
+  {% endif %}
+  
+  <div class="post-content" style="background: linear-gradient(135deg, {{ site.data.colors.wood-medium }} 0%, {{ site.data.colors.wood-light }} 100%); padding: 3rem; border-radius: 12px; border: 3px solid {{ site.data.colors.metal }}; box-shadow: 0 8px 20px rgba(0,0,0,0.7);">
     {{ content }}
+  </div>
+  
+  <div class="post-tags" style="margin-top: 2rem;">
+    {% for tag in page.tags %}
+      <a href="/tags/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
   </div>
 </article>
