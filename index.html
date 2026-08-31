@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Homens do Reino — Erguendo homens segundo o evangelho</title>
 <meta name="description" content="Levantar uma geração de homens segundo o coração de Deus.">
+  
+<!-- Biblioteca para converter Markdown em HTML -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>  
+  
 <style>
   :root{
     --bg:#0f0d0b;
@@ -707,155 +711,109 @@
 <div class="toast" id="toast"></div>
 
 <script>
-  // ============ DADOS DOS POSTS ============
-  const posts = [
-    {
-      id:'homem-segundo-coracao',
-      title:'Homem segundo o coração de Deus',
-      date:'27 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
-      tags:['identidade-em-cristo','coracao','chamado'],
-      excerpt:'Davi não foi chamado por sua força ou aparência, mas por um coração alinhado ao do Senhor.',
-      content:`<p>Davi não foi chamado por sua força ou aparência, mas por um coração alinhado ao do Senhor. Em tempos de ruído e desempenho, o chamado permanece: ser um homem cujo interior agrada a Deus mais do que o exterior impressiona os homens.</p>
-      <h2>O critério de Deus</h2>
-      <p>Quando Samuel foi ungir um rei entre os filhos de Jessé, olhou para a aparência. Eliabe era alto, forte, imponente. Mas o Senhor disse: "O Senhor não vê como vê o homem: o homem vê o exterior, porém o Senhor olha o coração" (1 Samuel 16:7).</p>
-      <blockquote>"Achei a Davi, filho de Jessé, homem segundo o meu coração." — Atos 13:22</blockquote>
-      <h2>O que significa ter o coração de Deus</h2>
-      <p>Não significa perfeição — Davi caiu profundamente. Significa direção. Um coração que, quando erra, volta. Quando peca, se arrepende. Quando é confrontado, se dobra. Essa é a marca de um homem segundo o coração de Deus: não a ausência de queda, mas a prontidão em retornar.</p>
-      <h2>Guarda o teu coração</h2>
-      <p>Provérbios 4:23 diz: "Sobre tudo o que se deve guardar, guarda o coração, porque dele procedem as fontes da vida." A batalha pela masculinidade bíblica se trava primeiro no interior — onde nascem os desejos, as decisões, as lealdades.</p>
-      <p>O homem do Reino não se preocupa tanto em parecer. Preocupa-se em ser. E ser, diante de Deus, é sempre mais importante do que ser visto pelos homens.</p>`
-    },
-    {
-      id:'eu-e-minha-casa',
-      title:'Como para mim e minha casa',
-      date:'25 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80',
-      tags:['governanca-espiritual','lar','lideranca'],
-      excerpt:'Josué declarou diante de uma nação: "Eu e a minha casa serviremos ao Senhor."',
-      content:`<p>Josué declarou diante de uma nação: "Eu e a minha casa serviremos ao Senhor." Governança espiritual no lar não é autoritarismo — é liderança servil que escolhe, ensina e protege a fé sob o próprio teto.</p>
-      <h2>O contexto da declaração</h2>
-      <p>Israel estava prestes a entrar na terra. Josué sabia que a tentação era grande: adorar os deuses dos amorreus, dos cananeus, dos vizinhos. Por isso, diante de todo o povo, ele traçou uma linha: "Eu e a minha casa serviremos ao Senhor."</p>
-      <blockquote>"Escolhei, hoje, a quem sirvais... porém eu e a minha casa serviremos ao Senhor." — Josué 24:15</blockquote>
-      <h2>Liderança que serve</h2>
-      <p>Governar a casa não é mandar. É assumir responsabilidade espiritual. É o pai que ora com os filhos. É o marido que ama a esposa como Cristo amou a igreja. É o homem que abre a Bíblia em casa e não apenas no templo.</p>
-      <h2>O altar no centro</h2>
-      <p>Nos tempos antigos, o pai levantava altares. Hoje, o altar pode ser a mesa, a oração noturna, a leitura da Escritura. Governança espiritual começa quando o homem decide que a presença de Deus terá lugar central sob o seu teto.</p>`
-    },
-    {
-      id:'defendei-o-orfao',
-      title:'Defendei o órfão, pleiteai a causa da viúva',
-      date:'20 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80',
-      tags:['missao-de-misericordia','justica','servico'],
-      excerpt:'A missão de misericórdia não é opcional. Isaías 1:17 ordena: aprendei a fazer o bem.',
-      content:`<p>A missão de misericórdia não é opcional. Isaías 1:17 ordena: aprendei a fazer o bem, buscai a justiça, repreendei o opressor. Homens do Reino não se contentam com devoção privada — saem ao encontro dos vulneráveis.</p>
-      <h2>A ordem é aprender</h2>
-      <p>Note o verbo: "aprendei". Fazer o bem não é instinto — é disciplina. O homem precisa ser formado na justiça, precisa exercitar o olhar, precisa se mover. A misericórdia se aprende andando com os que sofrem.</p>
-      <blockquote>"Aprendei a fazer o bem; buscai a justiça; repreendei ao opressor; defendei o órfão, pleiteai a causa da viúva." — Isaías 1:17</blockquote>
-      <h2>A religião pura</h2>
-      <p>Tiago 1:27 define: "A religião pura e sem mácula, para com Deus e Pai, é esta: visitar os órfãos e as viúvas nas suas tribulações e guardar-se da corrupção do mundo."</p>
-      <p>Não é culto. Não é louvor. Não é pregação. É visita. É presença. É homem que sai de casa e vai ao encontro de quem precisa.</p>
-      <h2>Masculinidade que se move</h2>
-      <p>O homem do Reino não é passivo. Ele vê a necessidade e se move. Ele ouve o clamor e responde. Essa é a masculinidade de Jesus — que não veio para ser servido, mas para servir e dar a vida em resgate de muitos.</p>`
-    },
-    {
-      id:'a-imagem-e-semelhanca',
-      title:'À imagem e semelhança',
-      date:'18 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-      tags:['identidade-em-cristo','criacao','dignidade'],
-      excerpt:'Gênesis 1:26-27 revela a origem da dignidade masculina: fomos criados à imagem de Deus.',
-      content:`<p>Gênesis 1:26-27 revela a origem da dignidade masculina: fomos criados à imagem de Deus. Antes de qualquer papel ou título, a identidade do homem está em quem o formou — e em Cristo, o segundo Adão, essa imagem é restaurada.</p>
-      <h2>A origem da dignidade</h2>
-      <p>O homem não é um acidente. Não é um produto da evolução cega. Não é um mero animal racional. Ele é <em>imago Dei</em> — imagem de Deus. Essa é a raiz de toda dignidade humana, e de forma particular da dignidade masculina.</p>
-      <blockquote>"Façamos o homem à nossa imagem, conforme a nossa semelhança." — Gênesis 1:26</blockquote>
-      <h2>A imagem restaurada</h2>
-      <p>O pecado deformou essa imagem. Mas Cristo, o segundo Adão, veio restaurá-la. "O qual é a imagem do Deus invisível" (Colossenses 1:15). Ser homem em Cristo é ser reconformado à imagem do Filho.</p>
-      <h2>Identidade antes de função</h2>
-      <p>Muitos homens buscam identidade no que fazem: provedor, líder, conquistador. Mas a identidade vem antes. Primeiro somos imagem de Deus; depois, exercemos funções. Quando invertemos essa ordem, nos tornamos escravos do desempenho.</p>`
-    },
-    {
-      id:'o-altar-no-centro',
-      title:'O altar no centro da casa',
-      date:'13 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=800&q=80',
-      tags:['governanca-espiritual','oracao','familia'],
-      excerpt:'Nos tempos antigos, o pai levantava altares. Hoje, o altar pode ser a mesa, a oração noturna.',
-      content:`<p>Nos tempos antigos, o pai levantava altares. Hoje, o altar pode ser a mesa, a oração noturna, a leitura da Escritura. Governança espiritual começa quando o homem decide que a presença de Deus terá lugar central sob o seu teto.</p>
-      <h2>Abraão, Isaque e Jacó</h2>
-      <p>Os patriarcas não tinham templos. Tinham altares. E quem os levantava era o pai, o cabeça da família. Cada altar era um marco de encontro com Deus — e um ensino para os filhos sobre quem é o Senhor.</p>
-      <h2>O altar hoje</h2>
-      <p>Não precisamos de pedras. Precisamos de presença. O altar hoje é a mesa onde se abençoa o alimento. É o joelho dobrado antes de dormir. É a Bíblia aberta em voz alta para os filhos ouvirem.</p>
-      <blockquote>"Eu e a minha casa serviremos ao Senhor." — Josué 24:15</blockquote>
-      <h2>Um ato de decisão</h2>
-      <p>Levantar o altar no centro da casa é uma decisão. Não acontece por osmose. O homem precisa dizer: "a partir de hoje, Deus terá lugar central aqui". E então, dia após dia, sustentar essa decisão com oração, leitura e exemplo.</p>`
-    },
-    {
-      id:'nao-apenas-ouvintes',
-      title:'Não apenas ouvintes',
-      date:'11 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80',
-      tags:['missao-de-misericordia','evangelho','acao'],
-      excerpt:'Tiago 1:27 define a religião pura: visitar os órfãos e as viúvas nas suas tribulações.',
-      content:`<p>Tiago 1:27 define a religião pura: visitar os órfãos e as viúvas nas suas tribulações e guardar-se da corrupção do mundo. A fé que não se move em direção ao próximo ainda não aprendeu o evangelho em sua plenitude.</p>
-      <h2>Sede praticantes</h2>
-      <p>"Sede praticantes da palavra e não somente ouvintes, enganando-vos a vós mesmos" (Tiago 1:22). Ouvir o sermão, ler o livro, assistir ao vídeo — tudo isso é bom. Mas se não vira ação, vira engano.</p>
-      <blockquote>"A religião pura e sem mácula... é visitar os órfãos e as viúvas." — Tiago 1:27</blockquote>
-      <h2>A fé que anda</h2>
-      <p>O evangelho não é só crido — é andado. Jesus não morreu para nos dar uma teologia, mas uma vida. Uma vida que sai de casa, que vê o necessitado, que se suja com a realidade do outro.</p>
-      <h2>Homens que se movem</h2>
-      <p>O homem do Reino não é espectador. É participante. Não é apenas ouvinte — é praticante. E a prática mais pura, segundo Tiago, é a misericórdia em ação.</p>`
-    },
-    {
-      id:'o-peso-da-coroa',
-      title:'O peso da coroa',
-      date:'06 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
-      tags:['identidade-em-cristo','lideranca','cruz'],
-      excerpt:'Cristo usou a coroa de espinhos antes da coroa de glória. Liderança no Reino começa com renúncia.',
-      content:`<p>Cristo usou a coroa de espinhos antes da coroa de glória. Liderança no Reino não começa com poder, mas com renúncia. Homens do Reino aprendem que o trono verdadeiro é a cruz — e o governo, o serviço.</p>
-      <h2>A lógica invertida</h2>
-      <p>O mundo diz: liderar é ser servido. O Reino diz: liderar é servir. O mundo diz: poder é ter. O Reino diz: poder é dar. Essa inversão é o escândalo da cruz — e o coração da masculinidade bíblica.</p>
-      <blockquote>"Quem quiser ser o maior, seja servo de todos." — Marcos 10:44</blockquote>
-      <h2>A coroa de espinhos</h2>
-      <p>Antes da glória, a cruz. Antes do trono, o madeiro. Antes da exaltação, a humilhação. Esse é o caminho do Rei — e de todo homem que quer reinar com Ele.</p>
-      <h2>Liderança que renuncia</h2>
-      <p>O homem do Reino não busca palcos. Busca o Getsêmani. Não busca aplausos. Busca obediência. Não busca ser servido. Busca servir. Porque sabe que a verdadeira grandeza se mede em joelhos dobrados, não em pés sobre os outros.</p>`
-    },
-    {
-      id:'guardai-o-coracao',
-      title:'Guardai o vosso coração',
-      date:'04 de agosto de 2026',
-      img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
-      tags:['identidade-em-cristo','coracao','vigilancia'],
-      excerpt:'Provérbios 4:23 ordena: sobre tudo o que se deve guardar, guarda o coração.',
-      content:`<p>Provérbios 4:23 ordena: sobre tudo o que se deve guardar, guarda o coração. A batalha pela identidade do homem se trava primeiro no interior — onde nascem as fontes da vida e onde o ego ou Cristo reinam.</p>
-      <h2>O coração como fonte</h2>
-      <p>"Porque dele procedem as fontes da vida", diz o texto. O coração não é apenas um órgão — é o centro decisório do ser humano. É de lá que saem os desejos, as escolhas, as lealdades.</p>
-      <blockquote>"Sobre tudo o que se deve guardar, guarda o coração, porque dele procedem as fontes da vida." — Provérbios 4:23</blockquote>
-      <h2>Dois reis possíveis</h2>
-      <p>No coração do homem, há sempre um trono. Ou reina o ego — com suas paixões, seus medos, sua auto-suficiência — ou reina Cristo, com sua graça, sua verdade, seu senhorio. Não há território neutro.</p>
-      <h2>A vigilância contínua</h2>
-      <p>Guardar o coração não é um ato único. É vigilância diária. É perguntar: o que estou deixando entrar? O que está moldando meus desejos? A quem estou ouvindo? Porque o que entra no coração, sai na vida.</p>`
-    },
-    {
-      id:'o-evangelho-puro',
-      title:'O evangelho puro de Cristo',
-      date:'30 de julho de 2026',
-      img:'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&q=80',
-      tags:['evangelho','graca','missao'],
-      excerpt:'A missão de Homens do Reino não é erguer homens por motivação ou técnica, mas pelo evangelho puro.',
-      content:`<p>A missão de Homens do Reino não é erguer homens por motivação ou técnica, mas pelo evangelho puro de Cristo. Só a cruz regenera. Só a graça sustenta. Só a Palavra forma homens segundo o coração de Deus.</p>
-      <h2>Outro evangelho não há</h2>
-      <p>Paulo advertiu os gálatas: "Admiro-me de que tão depressa estejais desertando daquele que vos chamou na graça de Cristo para outro evangelho, o qual não é outro" (Gálatas 1:6-7). Há muitos "evangelhos" por aí — de performance, de prosperidade, de autoajuda. Mas só um regenera.</p>
-      <blockquote>"Porque não me envergonho do evangelho, pois é poder de Deus para salvação." — Romanos 1:16</blockquote>
-      <h2>Só a cruz regenera</h2>
-      <p>Nenhuma técnica, nenhum método, nenhum programa muda o coração. Só a cruz. Só o Espírito Santo aplicando a verdade de Cristo ao homem interior. Tudo o mais é reforma externa — a cruz é transformação interna.</p>
-      <h2>Só a graça sustenta</h2>
-      <p>O homem não se mantém de pé por esforço próprio. Se mantém pela graça. Dia após dia. A graça não é licença para pecar — é o combustível para viver. E só a Palavra forma, dia após dia, um homem segundo o coração de Deus.</p>`
+   // ============ CARREGAMENTO DE POSTS VIA CMS ============
+  let posts = [];
+
+  async function loadPosts() {
+    try {
+      // Busca a lista de arquivos na pasta content/posts/ do GitHub
+      const response = await fetch('https://api.github.com/repos/HomensdoReino/homensdoreino-blog/contents/content/posts');
+      const files = await response.json();
+      
+      // Filtra apenas arquivos .md (Markdown)
+      const mdFiles = files.filter(f => f.name.endsWith('.md'));
+      
+      // Baixa o conteúdo de cada arquivo
+      const postsPromises = mdFiles.map(file => 
+        fetch(file.download_url).then(r => r.text())
+      );
+      
+      const contents = await Promise.all(postsPromises);
+      
+      // Converte cada arquivo Markdown em um objeto post
+      posts = contents.map(parseMarkdownPost).filter(p => p && p.id);
+      
+      // Ordena por data (mais recente primeiro)
+      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+      
+      // Renderiza os posts na página
+      renderPosts('home-posts', 3);
+      renderPosts('blog-posts');
+      renderCategories();
+      
+    } catch (error) {
+      console.error('Erro ao carregar posts:', error);
+      showToast('⚠ Erro ao carregar reflexões');
     }
-  ];
+  }
+    function parseMarkdownPost(content) {
+    // Separa o cabeçalho (frontmatter) do conteúdo
+    const parts = content.split('---');
+    if (parts.length < 3) return null;
+    
+    const frontmatter = parts[1];
+    const body = parts.slice(2).join('---').trim();
+    
+    // Lê as informações do cabeçalho (título, data, tags, etc)
+    const post = {};
+    const lines = frontmatter.split('\n');
+    let currentKey = null;
+    let currentArray = null;
+    let currentObject = null;
+    
+    lines.forEach(line => {
+      const match = line.match(/^(\w+):\s*(.*)$/);
+      if (match) {
+        const key = match[1];
+        let value = match[2].trim();
+        
+        // Salva array ou objeto anterior
+        if (currentObject) {
+          post[currentKey] = currentObject;
+          currentObject = null;
+        }
+        if (currentArray) {
+          post[currentKey] = currentArray;
+          currentArray = null;
+        }
+        
+        // Processa o valor
+        if (value.startsWith('"') && value.endsWith('"')) {
+          post[key] = value.slice(1, -1);
+        } else if (value === '') {
+          currentKey = key;
+          currentArray = [];
+        } else if (value.startsWith('{')) {
+          currentKey = key;
+          currentObject = {};
+        } else {
+          post[key] = value;
+        }
+      } else if (currentArray && line.trim().startsWith('- ')) {
+        // Adiciona item à lista (tags)
+        let item = line.trim().slice(2);
+        if (item.startsWith('"') && item.endsWith('"')) item = item.slice(1, -1);
+        currentArray.push(item);
+      } else if (currentObject) {
+        // Adiciona propriedade ao objeto (versículo)
+        const objMatch = line.match(/^\s{2}(\w+):\s*(.*)$/);
+        if (objMatch) {
+          let val = objMatch[2].trim();
+          if (val.startsWith('"') && val.endsWith('"')) val = val.slice(1, -1);
+          currentObject[objMatch[1]] = val;
+        }
+      }
+    });
+    
+    // Salva último array/objeto
+    if (currentArray) post[currentKey] = currentArray;
+    if (currentObject) post[currentKey] = currentObject;
+    
+    // Converte o corpo Markdown para HTML
+    post.content = marked.parse(body);
+    
+    return post;
+  }
 
   // ============ NAVEGAÇÃO ============
   function navigate(pageId,postId){
@@ -923,20 +881,40 @@
     `).join('');
   }
 
-  function renderPost(id){
-    const p = posts.find(x=>x.id===id);
-    if(!p) return;
+    function renderPost(id) {
+    const p = posts.find(x => x.id === id);
+    if (!p) return;
+    
     const url = encodeURIComponent(window.location.href);
     const title = encodeURIComponent(p.title);
     
+    // Versículo destaque (se existir)
+    const verseBlock = p.verse && p.verse.text ? `
+      <blockquote>
+        "${p.verse.text}"
+        <cite>— ${p.verse.ref || ''}</cite>
+      </blockquote>
+    ` : '';
+    
+    // Label do pilar
+    const pilarLabel = {
+      'identidade-em-cristo': 'Pilar I — Identidade em Cristo',
+      'governanca-espiritual': 'Pilar II — Governança Espiritual no Lar',
+      'missao-de-misericordia': 'Pilar III — Missão de Misericórdia'
+    }[p.pilar] || '';
+    
     document.getElementById('post-content').innerHTML = `
       <span class="back" onclick="navigate('blog')">← Voltar ao blog</span>
+      <div class="post-meta" style="margin-bottom:1rem">
+        ${pilarLabel ? `<span class="tag">${pilarLabel}</span>` : ''}
+      </div>
       <h1>${p.title}</h1>
       <div class="meta">${p.date} · Homens do Reino</div>
       <img class="cover" src="${p.img}" alt="${p.title}">
+      ${verseBlock}
       <article>${p.content}</article>
       <div class="post-tags" style="margin-top:2rem">
-        ${p.tags.map(t=>`<span class="tag" onclick="navigate('blog');setTimeout(()=>filterByCategory('${t}'),100)">${t}</span>`).join('')}
+        ${p.tags.map(t => `<span class="tag" onclick="navigate('blog');setTimeout(()=>filterByCategory('${t}'),100)">${t}</span>`).join('')}
       </div>
       <div class="share">
         <span class="share-label">Compartilhe:</span>
@@ -1054,10 +1032,8 @@
   }
 
   // ============ INIT ============
-  initTheme();
-  renderPosts('home-posts',3);
-  renderPosts('blog-posts');
-  renderCategories();
+  // Carrega posts do CMS
+  loadPosts();
 
   window.addEventListener('load',()=>{
     const hash = location.hash.replace('#','');
@@ -1070,6 +1046,7 @@
   window.addEventListener('popstate',(e)=>{
     if(e.state && e.state.page) navigate(e.state.page, e.state.post);
   });
+  
   // ============ FORMULÁRIO COM AJAX ============
   async function sendForm(e) {
     e.preventDefault();
