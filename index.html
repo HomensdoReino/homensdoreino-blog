@@ -1,72 +1,1075 @@
----
-layout: default
-title: Blog Homens do Reino
----
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homens do Reino — Erguendo homens segundo o evangelho</title>
+<meta name="description" content="Levantar uma geração de homens segundo o coração de Deus.">
+<style>
+  :root{
+    --bg:#0f0d0b;
+    --bg-soft:#1a1714;
+    --surface:#201c18;
+    --line:#2e2822;
+    --text:#ece5db;
+    --text-soft:#d8cfc2;
+    --muted:#a89c8c;
+    --gold:#c9a24a;
+    --gold-soft:#e0c274;
+    --accent:#8b1e1e;
+  }
+  html[data-theme="light"]{
+    --bg:#f5f1ea;
+    --bg-soft:#ebe5db;
+    --surface:#ffffff;
+    --line:#d9d1c3;
+    --text:#1a1714;
+    --text-soft:#3a332b;
+    --muted:#6b5f50;
+    --gold:#8b6f2e;
+    --gold-soft:#a6863d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Georgia','Times New Roman',serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    transition:background .3s,color .3s;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--gold);text-decoration:none;transition:color .2s}
+  a:hover{color:var(--gold-soft)}
 
-<section class="hero-blog">
-  <span class="hero-eyebrow">Blog Homens do Reino</span>
-  <h1>Erguendo homens segundo o evangelho</h1>
-  <p class="hero-subtitle">Reflexões, estudos e chamados para uma geração de homens segundo o coração de Deus.</p>
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,13,11,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  html[data-theme="light"] header{background:rgba(245,241,234,.92)}
+  .nav{
+    max-width:1200px;margin:0 auto;
+    padding:1rem 1.5rem;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .logo{
+    font-family:'Georgia',serif;
+    font-size:1.3rem;font-weight:700;
+    color:var(--text);letter-spacing:.5px;
+    display:flex;align-items:center;gap:.5rem;
+    cursor:pointer;
+  }
+  .logo .cross{color:var(--gold);font-size:1.5rem}
+  .menu{display:flex;gap:2rem;list-style:none;align-items:center}
+  .menu a{
+    color:var(--muted);font-size:.95rem;
+    text-transform:uppercase;letter-spacing:1.5px;
+    font-family:'Helvetica',sans-serif;font-weight:500;
+    cursor:pointer;
+  }
+  .menu a:hover,.menu a.active{color:var(--gold)}
+  .menu .cta{
+    background:var(--gold);color:#1a1714;
+    padding:.6rem 1.2rem;border-radius:2px;
+    font-weight:700;
+  }
+  .menu .cta:hover{background:var(--gold-soft);color:#1a1714}
+  .theme-toggle{
+    background:none;border:1px solid var(--line);
+    color:var(--text);cursor:pointer;
+    width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1rem;transition:all .2s;
+  }
+  .theme-toggle:hover{border-color:var(--gold);color:var(--gold)}
+  .burger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
 
-  <div class="search-box">
-    <span class="search-icon">🔍</span>
-    <input type="text" placeholder="Buscar no blog...">
-    <button class="btn-buscar">Buscar</button>
-  </div>
-</section>
+  /* Pages */
+  .page{display:none;animation:fade .4s ease}
+  .page.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-<section class="pilares-destaque">
-  <div class="pilar-card">
-    <span class="pilar-num">Pilar I</span>
-    <h3>Identidade em Cristo</h3>
-    <p class="pilar-ref">Gênesis 1:26-27</p>
-  </div>
-  <div class="pilar-card">
-    <span class="pilar-num">Pilar II</span>
-    <h3>Governança Espiritual no Lar</h3>
-    <p class="pilar-ref">Josué 24:15</p>
-  </div>
-  <div class="pilar-card">
-    <span class="pilar-num">Pilar III</span>
-    <h3>Missão de Misericórdia</h3>
-    <p class="pilar-ref">Isaías 1:17</p>
-  </div>
-</section>
+  /* Hero */
+  .hero{
+    position:relative;
+    min-height:80vh;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+    background:
+      linear-gradient(rgba(15,13,11,.75),rgba(15,13,11,.9)),
+      url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80') center/cover;
+    padding:6rem 1.5rem;
+  }
+  html[data-theme="light"] .hero{
+    background:
+      linear-gradient(rgba(245,241,234,.7),rgba(245,241,234,.9)),
+      url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1600&q=80') center/cover;
+  }
+  .hero-inner{max-width:800px}
+  .hero h1{
+    font-size:clamp(2.2rem,5vw,3.8rem);
+    font-weight:400;
+    line-height:1.2;
+    margin-bottom:1.5rem;
+    letter-spacing:-.5px;
+  }
+  .hero h1 span{color:var(--gold);font-style:italic}
+  .hero p{
+    font-size:1.15rem;color:var(--muted);
+    margin-bottom:2.5rem;
+    max-width:600px;margin-left:auto;margin-right:auto;
+  }
+  .btn{
+    display:inline-block;
+    padding:.9rem 2rem;
+    background:var(--gold);color:#1a1714;
+    font-family:'Helvetica',sans-serif;
+    font-weight:700;font-size:.9rem;
+    text-transform:uppercase;letter-spacing:2px;
+    border:none;cursor:pointer;
+    transition:all .2s;
+  }
+  .btn:hover{background:var(--gold-soft);color:#1a1714}
+  .btn-ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+  .btn-ghost:hover{background:var(--gold);color:#1a1714}
 
-<section class="posts-grid">
-  {% for post in site.posts limit:6 %}
-  <article class="post-card">
-    {% if post.image %}
-    <img src="{{ post.image }}" alt="{{ post.title }}" class="post-image">
-    {% else %}
-    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="{{ post.title }}" class="post-image">
-    {% endif %}
+  /* Sections */
+  section{padding:5rem 1.5rem}
+  .container{max-width:1200px;margin:0 auto}
+  .section-title{text-align:center;margin-bottom:3rem}
+  .section-title .eyebrow{
+    color:var(--gold);
+    font-family:'Helvetica',sans-serif;
+    font-size:.8rem;letter-spacing:3px;
+    text-transform:uppercase;
+    display:block;margin-bottom:.8rem;
+  }
+  .section-title h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400}
 
-    <div class="post-content">
-      <div class="post-meta">
-        <time>{{ post.date | date: "%d de %B de %Y" }}</time>
-        <span>·</span>
-        <span>Homens do Reino</span>
+  /* Pilares */
+  .pilares-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:2rem;
+  }
+  .pilar{
+    background:var(--surface);
+    border:1px solid var(--line);
+    padding:2.5rem 2rem;
+    text-align:center;
+    transition:transform .3s,border-color .3s;
+    cursor:pointer;
+  }
+  .pilar:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .pilar .num{
+    color:var(--gold);
+    font-family:'Helvetica',sans-serif;
+    font-size:.8rem;letter-spacing:3px;
+    margin-bottom:1rem;
+  }
+  .pilar h3{font-size:1.4rem;margin-bottom:1rem;font-weight:400}
+  .pilar .verse{color:var(--muted);font-style:italic;font-size:.95rem}
+
+  /* Blog */
+  .blog-header{
+    background:var(--bg-soft);
+    padding:4rem 1.5rem 3rem;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .blog-header h1{font-size:clamp(2rem,4vw,3rem);font-weight:400;margin-bottom:1rem}
+  .blog-header p{color:var(--muted);max-width:600px;margin:0 auto 2rem}
+  .search{
+    max-width:500px;margin:0 auto 1.5rem;
+    display:flex;gap:.5rem;
+  }
+  .search input{
+    flex:1;padding:.8rem 1rem;
+    background:var(--surface);border:1px solid var(--line);
+    color:var(--text);font-family:inherit;
+  }
+  .search input:focus{outline:none;border-color:var(--gold)}
+  
+  /* Categorias */
+  .categories{
+    max-width:900px;margin:0 auto;
+    display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;
+  }
+  .cat-btn{
+    background:transparent;
+    color:var(--muted);
+    border:1px solid var(--line);
+    padding:.4rem 1rem;
+    font-family:'Helvetica',sans-serif;
+    font-size:.75rem;letter-spacing:1.5px;
+    text-transform:uppercase;
+    cursor:pointer;transition:all .2s;
+  }
+  .cat-btn:hover,.cat-btn.active{
+    background:var(--gold);color:#1a1714;border-color:var(--gold);
+  }
+
+  .posts{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:2rem;
+    padding:3rem 1.5rem;
+    max-width:1200px;margin:0 auto;
+  }
+  .post-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    overflow:hidden;
+    cursor:pointer;
+    transition:transform .3s,border-color .3s;
+    display:flex;flex-direction:column;
+  }
+  .post-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .post-card img{width:100%;height:220px;object-fit:cover}
+  .post-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+  .post-meta{
+    color:var(--muted);
+    font-family:'Helvetica',sans-serif;
+    font-size:.75rem;letter-spacing:1.5px;
+    text-transform:uppercase;
+    margin-bottom:.8rem;
+  }
+  .post-card h3{font-size:1.3rem;font-weight:400;margin-bottom:.8rem;line-height:1.3}
+  .post-card p{color:var(--muted);font-size:.95rem;margin-bottom:1rem;flex:1}
+  .post-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:auto}
+  .tag{
+    background:var(--bg);
+    color:var(--gold);
+    padding:.3rem .7rem;
+    font-size:.7rem;
+    font-family:'Helvetica',sans-serif;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    border:1px solid var(--line);
+    cursor:pointer;transition:all .2s;
+  }
+  .tag:hover{background:var(--gold);color:#1a1714}
+
+  /* Post Full */
+  .post-full{max-width:780px;margin:0 auto;padding:4rem 1.5rem}
+  .post-full .back{
+    color:var(--muted);font-family:'Helvetica',sans-serif;
+    font-size:.8rem;letter-spacing:2px;text-transform:uppercase;
+    display:inline-block;margin-bottom:2rem;cursor:pointer;
+  }
+  .post-full .back:hover{color:var(--gold)}
+  .post-full h1{font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.2;margin-bottom:1.5rem}
+  .post-full .meta{
+    color:var(--muted);margin-bottom:2.5rem;
+    padding-bottom:2rem;border-bottom:1px solid var(--line);
+    font-family:'Helvetica',sans-serif;
+    font-size:.85rem;letter-spacing:1px;
+  }
+  .post-full .cover{width:100%;height:400px;object-fit:cover;margin-bottom:2.5rem;border-radius:2px}
+  .post-full article{font-size:1.1rem;line-height:1.9}
+  .post-full article p{margin-bottom:1.5rem;color:var(--text-soft)}
+  .post-full article blockquote{
+    border-left:3px solid var(--gold);
+    padding:1rem 1.5rem;margin:2rem 0;
+    font-style:italic;color:var(--gold-soft);
+    background:var(--surface);
+  }
+  .post-full article h2{font-size:1.6rem;margin:2.5rem 0 1rem;font-weight:400}
+
+  /* Share */
+  .share{
+    margin-top:3rem;padding-top:2rem;
+    border-top:1px solid var(--line);
+    display:flex;align-items:center;gap:1rem;flex-wrap:wrap;
+  }
+  .share-label{
+    font-family:'Helvetica',sans-serif;
+    font-size:.75rem;letter-spacing:2px;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .share-btn{
+    background:var(--surface);
+    border:1px solid var(--line);
+    color:var(--text);
+    padding:.5rem 1rem;
+    font-family:'Helvetica',sans-serif;
+    font-size:.8rem;letter-spacing:1px;
+    cursor:pointer;transition:all .2s;
+    display:inline-flex;align-items:center;gap:.4rem;
+  }
+  .share-btn:hover{background:var(--gold);color:#1a1714;border-color:var(--gold)}
+
+  /* Newsletter */
+  .newsletter{
+    background:var(--bg-soft);
+    border:1px solid var(--line);
+    padding:3rem 2rem;
+    text-align:center;
+    margin:3rem auto;
+    max-width:700px;
+  }
+  .newsletter h3{font-size:1.6rem;font-weight:400;margin-bottom:.8rem}
+  .newsletter p{color:var(--muted);margin-bottom:1.5rem;font-size:.95rem}
+  .newsletter-form{
+    display:flex;gap:.5rem;max-width:450px;margin:0 auto;
+    flex-wrap:wrap;justify-content:center;
+  }
+  .newsletter-form input{
+    flex:1;min-width:200px;
+    padding:.8rem 1rem;
+    background:var(--surface);border:1px solid var(--line);
+    color:var(--text);font-family:inherit;
+  }
+  .newsletter-form input:focus{outline:none;border-color:var(--gold)}
+  .newsletter-msg{
+    margin-top:1rem;color:var(--gold);font-size:.9rem;
+    display:none;
+  }
+  .newsletter-msg.show{display:block}
+
+  /* Sobre */
+  .about{max-width:900px;margin:0 auto}
+  .about-hero{text-align:center;padding:4rem 1.5rem 2rem}
+  .about-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:400;margin-bottom:1rem}
+  .about-hero p{color:var(--muted);font-size:1.1rem}
+  .about-content{padding:2rem 1.5rem 4rem}
+  .about-content p{margin-bottom:1.5rem;font-size:1.05rem;color:var(--text-soft)}
+  .about-content h2{font-size:1.6rem;font-weight:400;margin:2.5rem 0 1rem;color:var(--gold)}
+  .verse-box{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    padding:1.5rem 2rem;margin:2rem 0;
+    font-style:italic;
+  }
+  .verse-box cite{
+    display:block;margin-top:.8rem;
+    color:var(--gold);font-style:normal;
+    font-family:'Helvetica',sans-serif;
+    font-size:.85rem;letter-spacing:1px;
+  }
+
+  /* Contato */
+  .contact{max-width:600px;margin:0 auto;padding:4rem 1.5rem}
+  .contact h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:400;text-align:center;margin-bottom:1rem}
+  .contact>p{text-align:center;color:var(--muted);margin-bottom:3rem}
+  .form-group{margin-bottom:1.5rem}
+  .form-group label{
+    display:block;margin-bottom:.5rem;
+    font-family:'Helvetica',sans-serif;
+    font-size:.8rem;letter-spacing:2px;
+    text-transform:uppercase;color:var(--muted);
+  }
+  .form-group input,.form-group textarea{
+    width:100%;padding:.9rem 1rem;
+    background:var(--surface);
+    border:1px solid var(--line);
+    color:var(--text);font-family:inherit;font-size:1rem;
+  }
+  .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--gold)}
+  .form-group textarea{min-height:140px;resize:vertical}
+
+  /* Chamado */
+  .chamado{
+    background:
+      linear-gradient(rgba(15,13,11,.85),rgba(15,13,11,.95)),
+      url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=1600&q=80') center/cover;
+    padding:6rem 1.5rem;text-align:center;
+  }
+  html[data-theme="light"] .chamado{
+    background:
+      linear-gradient(rgba(245,241,234,.85),rgba(245,241,234,.95)),
+      url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=1600&q=80') center/cover;
+  }
+  .chamado h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;margin-bottom:1.5rem}
+  .chamado p{color:var(--muted);max-width:600px;margin:0 auto 2rem;font-size:1.1rem}
+
+  /* Footer */
+  footer{
+    background:var(--bg-soft);
+    border-top:1px solid var(--line);
+    padding:4rem 1.5rem 2rem;
+  }
+  .footer-grid{
+    max-width:1200px;margin:0 auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:3rem;margin-bottom:3rem;
+  }
+  .footer-brand .logo{margin-bottom:1rem}
+  .footer-brand p{color:var(--muted);font-style:italic;font-size:.95rem}
+  .footer-col h4{
+    color:var(--gold);
+    font-family:'Helvetica',sans-serif;
+    font-size:.8rem;letter-spacing:2px;
+    text-transform:uppercase;margin-bottom:1.2rem;
+  }
+  .footer-col ul{list-style:none}
+  .footer-col li{margin-bottom:.6rem}
+  .footer-col a{color:var(--muted);font-size:.95rem;cursor:pointer}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-col .verse{font-size:.85rem;color:var(--muted);font-style:italic;margin-top:.3rem}
+  .footer-bottom{
+    max-width:1200px;margin:0 auto;
+    padding-top:2rem;border-top:1px solid var(--line);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+    color:var(--muted);font-size:.85rem;
+    font-family:'Helvetica',sans-serif;
+  }
+  .footer-bottom a{color:var(--muted)}
+  .footer-bottom a:hover{color:var(--gold)}
+
+  /* Toast */
+  .toast{
+    position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);
+    background:var(--gold);color:#1a1714;
+    padding:.8rem 1.5rem;
+    font-family:'Helvetica',sans-serif;
+    font-size:.85rem;letter-spacing:1px;
+    font-weight:700;
+    border-radius:2px;
+    opacity:0;pointer-events:none;
+    transition:opacity .3s,transform .3s;
+    z-index:100;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(-8px)}
+
+  /* Responsive */
+  @media(max-width:768px){
+    .menu{
+      display:none;
+      position:absolute;top:100%;left:0;right:0;
+      background:var(--bg-soft);
+      flex-direction:column;gap:0;
+      border-bottom:1px solid var(--line);
+    }
+    .menu.open{display:flex}
+    .menu li{width:100%;border-bottom:1px solid var(--line)}
+    .menu li:last-child{border-bottom:none}
+    .menu a{display:block;padding:1rem 1.5rem}
+    .burger{display:block}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:2rem}
+    .footer-brand{grid-column:1/-1}
+    section{padding:3rem 1.5rem}
+    .post-full .cover{height:250px}
+  }
+  @media(max-width:480px){
+    .footer-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo" onclick="navigate('home')">
+      <span class="cross">✝</span> Homens do Reino
+    </div>
+    <button class="burger" onclick="toggleMenu()">☰</button>
+    <ul class="menu" id="menu">
+      <li><a data-page="home" onclick="navigate('home')">Início</a></li>
+      <li><a data-page="sobre" onclick="navigate('sobre')">Sobre</a></li>
+      <li><a data-page="blog" onclick="navigate('blog')">Blog</a></li>
+      <li><a data-page="pilares" onclick="navigate('pilares')">Pilares</a></li>
+      <li><a data-page="contato" onclick="navigate('contato')">Contato</a></li>
+      <li><button class="theme-toggle" onclick="toggleTheme()" id="themeBtn" title="Alternar tema">☀</button></li>
+      <li><a class="cta" onclick="navigate('chamado')">Responder ao chamado</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HOME -->
+<main id="home" class="page active">
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Erguendo homens segundo <span>o evangelho</span></h1>
+      <p>Reflexões, estudos e chamados para uma geração de homens segundo o coração de Deus.</p>
+      <a class="btn" onclick="navigate('blog')">Ler o blog</a>
+      <a class="btn btn-ghost" style="margin-left:.8rem" onclick="navigate('pilares')">Conhecer os pilares</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">Fundamentos</span>
+        <h2>Três pilares, um só chamado</h2>
       </div>
-
-      <h2>{{ post.title }}</h2>
-
-      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-
-      <a href="{{ post.url }}" class="read-more">Ler mais →</a>
+      <div class="pilares-grid">
+        <div class="pilar" onclick="navigate('pilares')">
+          <div class="num">PILAR I</div>
+          <h3>Identidade em Cristo</h3>
+          <p class="verse">Gênesis 1:26-27</p>
+        </div>
+        <div class="pilar" onclick="navigate('pilares')">
+          <div class="num">PILAR II</div>
+          <h3>Governança Espiritual no Lar</h3>
+          <p class="verse">Josué 24:15</p>
+        </div>
+        <div class="pilar" onclick="navigate('pilares')">
+          <div class="num">PILAR III</div>
+          <h3>Missão de Misericórdia</h3>
+          <p class="verse">Isaías 1:17</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    {% if post.tags %}
-    <div class="post-tags">
-      {% for tag in post.tags limit:3 %}
-      <span class="tag">{{ tag }}</span>
-      {% endfor %}
+  <section style="background:var(--bg-soft)">
+    <div class="container">
+      <div class="section-title">
+        <span class="eyebrow">Recentes</span>
+        <h2>Reflexões do blog</h2>
+      </div>
+      <div id="home-posts" class="posts" style="padding:0"></div>
+      <div style="text-align:center;margin-top:2rem">
+        <a class="btn btn-ghost" onclick="navigate('blog')">Ver todos os posts →</a>
+      </div>
     </div>
-    {% endif %}
-  </article>
-  {% endfor %}
-</section>
+  </section>
+</main>
 
-<nav class="pagination">
-  <a href="/blog">Posts mais antigos →</a>
-</nav>
+<!-- SOBRE -->
+<main id="sobre" class="page">
+  <div class="about">
+    <div class="about-hero">
+      <h1>Sobre Homens do Reino</h1>
+      <p>Um ministério dedicado a erguer homens segundo o coração de Deus.</p>
+    </div>
+    <div class="about-content">
+      <p>Homens do Reino nasceu de uma convicção simples e urgente: a igreja precisa de homens. Não de homens segundo os padrões do mundo — performáticos, apressados, vazios por dentro — mas de homens moldados pelo evangelho puro de Cristo.</p>
+      <div class="verse-box">
+        "Levantar uma geração de homens segundo o coração de Deus…"
+        <cite>— baseado em 1 Timóteo 3:4-5</cite>
+      </div>
+      <h2>Nossa missão</h2>
+      <p>Erguer homens através do evangelho puro de Cristo. Não por motivação, não por técnica, não por autoajuda. Só a cruz regenera. Só a graça sustenta. Só a Palavra forma homens segundo o coração de Deus.</p>
+      <div class="verse-box">
+        "A religião pura e sem mácula, para com Deus e Pai, é esta: visitar os órfãos e as viúvas nas suas tribulações e guardar-se da corrupção do mundo."
+        <cite>— Tiago 1:27</cite>
+      </div>
+      <h2>O que cremos</h2>
+      <p>Cremos que a masculinidade bíblica não se mede por músculos, cargos ou conquistas, mas por um coração alinhado ao do Senhor. Cremos que o lar é o primeiro reino a ser governado. Cremos que a fé que não se move em direção ao próximo ainda não aprendeu o evangelho em sua plenitude.</p>
+      <p>Por isso trabalhamos em três pilares inseparáveis: <strong>identidade em Cristo</strong>, <strong>governança espiritual no lar</strong> e <strong>missão de misericórdia</strong>. Três dimensões de uma mesma vocação.</p>
+      <h2>Para quem é</h2>
+      <p>Para homens que sentem o peso do chamado. Para pais que querem liderar sua casa. Para maridos que desejam amar como Cristo amou a igreja. Para jovens que buscam uma masculinidade que não se curve ao mundo. Para qualquer homem disposto a dizer: "eu e a minha casa serviremos ao Senhor".</p>
+    </div>
+  </div>
+</main>
+
+<!-- BLOG -->
+<main id="blog" class="page">
+  <div class="blog-header">
+    <h1>Blog Homens do Reino</h1>
+    <p>Erguendo homens segundo o evangelho</p>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Buscar reflexões..." oninput="filterPosts()">
+    </div>
+    <div class="categories" id="categories"></div>
+  </div>
+  <div id="blog-posts" class="posts"></div>
+  
+  <!-- Newsletter -->
+  <div class="newsletter">
+    <h3>Receba reflexões no seu e-mail</h3>
+    <p>Uma vez por semana, uma palavra para edificar sua caminhada.</p>
+    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+      <input type="email" placeholder="Seu melhor e-mail" required>
+      <button type="submit" class="btn">Inscrever</button>
+    </form>
+    <div class="newsletter-msg" id="newsletterMsg">✓ Inscrição registrada. Que o Senhor lhe abençoe.</div>
+  </div>
+</main>
+
+<!-- POST INDIVIDUAL -->
+<main id="post" class="page">
+  <div class="post-full" id="post-content"></div>
+</main>
+
+<!-- PILARES -->
+<main id="pilares" class="page">
+  <div class="about">
+    <div class="about-hero">
+      <h1>Os três pilares</h1>
+      <p>Três dimensões inseparáveis da vocação masculina segundo o evangelho.</p>
+    </div>
+    <div class="about-content">
+      <h2>Pilar I — Identidade em Cristo</h2>
+      <div class="verse-box">
+        "Façamos o homem à nossa imagem, conforme a nossa semelhança."
+        <cite>— Gênesis 1:26</cite>
+      </div>
+      <p>A dignidade do homem não vem de seus feitos, mas de sua origem. Fomos criados à imagem de Deus — e em Cristo, o segundo Adão, essa imagem é restaurada. Antes de qualquer papel, título ou função, o homem é, primeiramente, uma criatura amada e redimida.</p>
+      <p>Identidade em Cristo significa guardar o coração (Provérbios 4:23), carregar a coroa de espinhos antes da coroa de glória, e reconhecer que o trono verdadeiro é a cruz — e o governo, o serviço.</p>
+
+      <h2>Pilar II — Governança Espiritual no Lar</h2>
+      <div class="verse-box">
+        "Eu e a minha casa serviremos ao Senhor."
+        <cite>— Josué 24:15</cite>
+      </div>
+      <p>Governança espiritual no lar não é autoritarismo. É liderança servil que escolhe, ensina e protege a fé sob o próprio teto. É o homem que decide que a presença de Deus terá lugar central em sua casa — na mesa, na oração noturna, na leitura da Escritura.</p>
+      <p>Como disse Paulo a Timóteo: se alguém não sabe governar a própria casa, como cuidará da igreja? O altar no centro da casa é o primeiro ato de um homem do Reino.</p>
+
+      <h2>Pilar III — Missão de Misericórdia</h2>
+      <div class="verse-box">
+        "Aprendei a fazer o bem; buscai a justiça; repreendei ao opressor; defendei o órfão, pleiteai a causa da viúva."
+        <cite>— Isaías 1:17</cite>
+      </div>
+      <p>A missão de misericórdia não é opcional. Homens do Reino não se contentam com devoção privada — saem ao encontro dos vulneráveis. A fé que não se move em direção ao próximo ainda não aprendeu o evangelho em sua plenitude.</p>
+      <p>Religião pura, segundo Tiago, é visitar órfãos e viúvas nas tribulações e guardar-se da corrupção do mundo. O homem do Reino é, antes de tudo, um homem que se move.</p>
+    </div>
+  </div>
+</main>
+
+<!-- CONTATO -->
+<main id="contato" class="page">
+  <div class="contact">
+    <h1>Fale conosco</h1>
+    <p>Envie sua mensagem, pedido de oração ou dúvida.</p>
+    <!-- ⚠️ SUBSTITUA SEU_FORMSPREE_ID pelo seu ID real do Formspree -->
+    <form action="https://formspree.io/f/SEU_FORMSPREE_ID" method="POST" onsubmit="submitForm(event)">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+      </div>
+      <button type="submit" class="btn" style="width:100%">Enviar mensagem</button>
+    </form>
+    <div style="margin-top:3rem;text-align:center;color:var(--muted);font-size:.9rem">
+      <p><a href="mailto:contato@homensdoreino.com.br">contato@homensdoreino.com.br</a></p>
+      <p><a href="https://www.homensdoreino.com.br">www.homensdoreino.com.br</a></p>
+    </div>
+  </div>
+</main>
+
+<!-- CHAMADO -->
+<main id="chamado" class="page">
+  <section class="chamado">
+    <h2>Responder ao chamado</h2>
+    <p>Se o Senhor está falando ao seu coração, não endureça. O chamado para ser um homem segundo o coração de Deus começa com um passo de rendição.</p>
+    <a class="btn" onclick="navigate('contato')">Falar com alguém</a>
+    <a class="btn btn-ghost" style="margin-left:.8rem" onclick="navigate('pilares')">Conhecer os pilares</a>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><span class="cross">✝</span> Homens do Reino</div>
+      <p>"Levantar uma geração de homens segundo o coração de Deus…"</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a onclick="navigate('home')">Início</a></li>
+        <li><a onclick="navigate('sobre')">Sobre</a></li>
+        <li><a onclick="navigate('blog')">Blog</a></li>
+        <li><a onclick="navigate('pilares')">Pilares</a></li>
+        <li><a onclick="navigate('contato')">Contato</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Pilares</h4>
+      <ul>
+        <li><a onclick="navigate('pilares')">Identidade em Cristo</a><div class="verse">Gn 1:26-27</div></li>
+        <li><a onclick="navigate('pilares')">Governança no Lar</a><div class="verse">Js 24:15</div></li>
+        <li><a onclick="navigate('pilares')">Missão de Misericórdia</a><div class="verse">Is 1:17</div></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="mailto:contato@homensdoreino.com.br">contato@homensdoreino.com.br</a></li>
+        <li><a href="https://www.homensdoreino.com.br">www.homensdoreino.com.br</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Homens do Reino. Todos os direitos reservados à Palavra de Deus.</div>
+    <div>
+      <a href="#">Privacidade</a> · <a href="#">Termos</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  // ============ DADOS DOS POSTS ============
+  const posts = [
+    {
+      id:'homem-segundo-coracao',
+      title:'Homem segundo o coração de Deus',
+      date:'27 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+      tags:['identidade-em-cristo','coracao','chamado'],
+      excerpt:'Davi não foi chamado por sua força ou aparência, mas por um coração alinhado ao do Senhor.',
+      content:`<p>Davi não foi chamado por sua força ou aparência, mas por um coração alinhado ao do Senhor. Em tempos de ruído e desempenho, o chamado permanece: ser um homem cujo interior agrada a Deus mais do que o exterior impressiona os homens.</p>
+      <h2>O critério de Deus</h2>
+      <p>Quando Samuel foi ungir um rei entre os filhos de Jessé, olhou para a aparência. Eliabe era alto, forte, imponente. Mas o Senhor disse: "O Senhor não vê como vê o homem: o homem vê o exterior, porém o Senhor olha o coração" (1 Samuel 16:7).</p>
+      <blockquote>"Achei a Davi, filho de Jessé, homem segundo o meu coração." — Atos 13:22</blockquote>
+      <h2>O que significa ter o coração de Deus</h2>
+      <p>Não significa perfeição — Davi caiu profundamente. Significa direção. Um coração que, quando erra, volta. Quando peca, se arrepende. Quando é confrontado, se dobra. Essa é a marca de um homem segundo o coração de Deus: não a ausência de queda, mas a prontidão em retornar.</p>
+      <h2>Guarda o teu coração</h2>
+      <p>Provérbios 4:23 diz: "Sobre tudo o que se deve guardar, guarda o coração, porque dele procedem as fontes da vida." A batalha pela masculinidade bíblica se trava primeiro no interior — onde nascem os desejos, as decisões, as lealdades.</p>
+      <p>O homem do Reino não se preocupa tanto em parecer. Preocupa-se em ser. E ser, diante de Deus, é sempre mais importante do que ser visto pelos homens.</p>`
+    },
+    {
+      id:'eu-e-minha-casa',
+      title:'Como para mim e minha casa',
+      date:'25 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80',
+      tags:['governanca-espiritual','lar','lideranca'],
+      excerpt:'Josué declarou diante de uma nação: "Eu e a minha casa serviremos ao Senhor."',
+      content:`<p>Josué declarou diante de uma nação: "Eu e a minha casa serviremos ao Senhor." Governança espiritual no lar não é autoritarismo — é liderança servil que escolhe, ensina e protege a fé sob o próprio teto.</p>
+      <h2>O contexto da declaração</h2>
+      <p>Israel estava prestes a entrar na terra. Josué sabia que a tentação era grande: adorar os deuses dos amorreus, dos cananeus, dos vizinhos. Por isso, diante de todo o povo, ele traçou uma linha: "Eu e a minha casa serviremos ao Senhor."</p>
+      <blockquote>"Escolhei, hoje, a quem sirvais... porém eu e a minha casa serviremos ao Senhor." — Josué 24:15</blockquote>
+      <h2>Liderança que serve</h2>
+      <p>Governar a casa não é mandar. É assumir responsabilidade espiritual. É o pai que ora com os filhos. É o marido que ama a esposa como Cristo amou a igreja. É o homem que abre a Bíblia em casa e não apenas no templo.</p>
+      <h2>O altar no centro</h2>
+      <p>Nos tempos antigos, o pai levantava altares. Hoje, o altar pode ser a mesa, a oração noturna, a leitura da Escritura. Governança espiritual começa quando o homem decide que a presença de Deus terá lugar central sob o seu teto.</p>`
+    },
+    {
+      id:'defendei-o-orfao',
+      title:'Defendei o órfão, pleiteai a causa da viúva',
+      date:'20 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80',
+      tags:['missao-de-misericordia','justica','servico'],
+      excerpt:'A missão de misericórdia não é opcional. Isaías 1:17 ordena: aprendei a fazer o bem.',
+      content:`<p>A missão de misericórdia não é opcional. Isaías 1:17 ordena: aprendei a fazer o bem, buscai a justiça, repreendei o opressor. Homens do Reino não se contentam com devoção privada — saem ao encontro dos vulneráveis.</p>
+      <h2>A ordem é aprender</h2>
+      <p>Note o verbo: "aprendei". Fazer o bem não é instinto — é disciplina. O homem precisa ser formado na justiça, precisa exercitar o olhar, precisa se mover. A misericórdia se aprende andando com os que sofrem.</p>
+      <blockquote>"Aprendei a fazer o bem; buscai a justiça; repreendei ao opressor; defendei o órfão, pleiteai a causa da viúva." — Isaías 1:17</blockquote>
+      <h2>A religião pura</h2>
+      <p>Tiago 1:27 define: "A religião pura e sem mácula, para com Deus e Pai, é esta: visitar os órfãos e as viúvas nas suas tribulações e guardar-se da corrupção do mundo."</p>
+      <p>Não é culto. Não é louvor. Não é pregação. É visita. É presença. É homem que sai de casa e vai ao encontro de quem precisa.</p>
+      <h2>Masculinidade que se move</h2>
+      <p>O homem do Reino não é passivo. Ele vê a necessidade e se move. Ele ouve o clamor e responde. Essa é a masculinidade de Jesus — que não veio para ser servido, mas para servir e dar a vida em resgate de muitos.</p>`
+    },
+    {
+      id:'a-imagem-e-semelhanca',
+      title:'À imagem e semelhança',
+      date:'18 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      tags:['identidade-em-cristo','criacao','dignidade'],
+      excerpt:'Gênesis 1:26-27 revela a origem da dignidade masculina: fomos criados à imagem de Deus.',
+      content:`<p>Gênesis 1:26-27 revela a origem da dignidade masculina: fomos criados à imagem de Deus. Antes de qualquer papel ou título, a identidade do homem está em quem o formou — e em Cristo, o segundo Adão, essa imagem é restaurada.</p>
+      <h2>A origem da dignidade</h2>
+      <p>O homem não é um acidente. Não é um produto da evolução cega. Não é um mero animal racional. Ele é <em>imago Dei</em> — imagem de Deus. Essa é a raiz de toda dignidade humana, e de forma particular da dignidade masculina.</p>
+      <blockquote>"Façamos o homem à nossa imagem, conforme a nossa semelhança." — Gênesis 1:26</blockquote>
+      <h2>A imagem restaurada</h2>
+      <p>O pecado deformou essa imagem. Mas Cristo, o segundo Adão, veio restaurá-la. "O qual é a imagem do Deus invisível" (Colossenses 1:15). Ser homem em Cristo é ser reconformado à imagem do Filho.</p>
+      <h2>Identidade antes de função</h2>
+      <p>Muitos homens buscam identidade no que fazem: provedor, líder, conquistador. Mas a identidade vem antes. Primeiro somos imagem de Deus; depois, exercemos funções. Quando invertemos essa ordem, nos tornamos escravos do desempenho.</p>`
+    },
+    {
+      id:'o-altar-no-centro',
+      title:'O altar no centro da casa',
+      date:'13 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=800&q=80',
+      tags:['governanca-espiritual','oracao','familia'],
+      excerpt:'Nos tempos antigos, o pai levantava altares. Hoje, o altar pode ser a mesa, a oração noturna.',
+      content:`<p>Nos tempos antigos, o pai levantava altares. Hoje, o altar pode ser a mesa, a oração noturna, a leitura da Escritura. Governança espiritual começa quando o homem decide que a presença de Deus terá lugar central sob o seu teto.</p>
+      <h2>Abraão, Isaque e Jacó</h2>
+      <p>Os patriarcas não tinham templos. Tinham altares. E quem os levantava era o pai, o cabeça da família. Cada altar era um marco de encontro com Deus — e um ensino para os filhos sobre quem é o Senhor.</p>
+      <h2>O altar hoje</h2>
+      <p>Não precisamos de pedras. Precisamos de presença. O altar hoje é a mesa onde se abençoa o alimento. É o joelho dobrado antes de dormir. É a Bíblia aberta em voz alta para os filhos ouvirem.</p>
+      <blockquote>"Eu e a minha casa serviremos ao Senhor." — Josué 24:15</blockquote>
+      <h2>Um ato de decisão</h2>
+      <p>Levantar o altar no centro da casa é uma decisão. Não acontece por osmose. O homem precisa dizer: "a partir de hoje, Deus terá lugar central aqui". E então, dia após dia, sustentar essa decisão com oração, leitura e exemplo.</p>`
+    },
+    {
+      id:'nao-apenas-ouvintes',
+      title:'Não apenas ouvintes',
+      date:'11 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80',
+      tags:['missao-de-misericordia','evangelho','acao'],
+      excerpt:'Tiago 1:27 define a religião pura: visitar os órfãos e as viúvas nas suas tribulações.',
+      content:`<p>Tiago 1:27 define a religião pura: visitar os órfãos e as viúvas nas suas tribulações e guardar-se da corrupção do mundo. A fé que não se move em direção ao próximo ainda não aprendeu o evangelho em sua plenitude.</p>
+      <h2>Sede praticantes</h2>
+      <p>"Sede praticantes da palavra e não somente ouvintes, enganando-vos a vós mesmos" (Tiago 1:22). Ouvir o sermão, ler o livro, assistir ao vídeo — tudo isso é bom. Mas se não vira ação, vira engano.</p>
+      <blockquote>"A religião pura e sem mácula... é visitar os órfãos e as viúvas." — Tiago 1:27</blockquote>
+      <h2>A fé que anda</h2>
+      <p>O evangelho não é só crido — é andado. Jesus não morreu para nos dar uma teologia, mas uma vida. Uma vida que sai de casa, que vê o necessitado, que se suja com a realidade do outro.</p>
+      <h2>Homens que se movem</h2>
+      <p>O homem do Reino não é espectador. É participante. Não é apenas ouvinte — é praticante. E a prática mais pura, segundo Tiago, é a misericórdia em ação.</p>`
+    },
+    {
+      id:'o-peso-da-coroa',
+      title:'O peso da coroa',
+      date:'06 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80',
+      tags:['identidade-em-cristo','lideranca','cruz'],
+      excerpt:'Cristo usou a coroa de espinhos antes da coroa de glória. Liderança no Reino começa com renúncia.',
+      content:`<p>Cristo usou a coroa de espinhos antes da coroa de glória. Liderança no Reino não começa com poder, mas com renúncia. Homens do Reino aprendem que o trono verdadeiro é a cruz — e o governo, o serviço.</p>
+      <h2>A lógica invertida</h2>
+      <p>O mundo diz: liderar é ser servido. O Reino diz: liderar é servir. O mundo diz: poder é ter. O Reino diz: poder é dar. Essa inversão é o escândalo da cruz — e o coração da masculinidade bíblica.</p>
+      <blockquote>"Quem quiser ser o maior, seja servo de todos." — Marcos 10:44</blockquote>
+      <h2>A coroa de espinhos</h2>
+      <p>Antes da glória, a cruz. Antes do trono, o madeiro. Antes da exaltação, a humilhação. Esse é o caminho do Rei — e de todo homem que quer reinar com Ele.</p>
+      <h2>Liderança que renuncia</h2>
+      <p>O homem do Reino não busca palcos. Busca o Getsêmani. Não busca aplausos. Busca obediência. Não busca ser servido. Busca servir. Porque sabe que a verdadeira grandeza se mede em joelhos dobrados, não em pés sobre os outros.</p>`
+    },
+    {
+      id:'guardai-o-coracao',
+      title:'Guardai o vosso coração',
+      date:'04 de agosto de 2026',
+      img:'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+      tags:['identidade-em-cristo','coracao','vigilancia'],
+      excerpt:'Provérbios 4:23 ordena: sobre tudo o que se deve guardar, guarda o coração.',
+      content:`<p>Provérbios 4:23 ordena: sobre tudo o que se deve guardar, guarda o coração. A batalha pela identidade do homem se trava primeiro no interior — onde nascem as fontes da vida e onde o ego ou Cristo reinam.</p>
+      <h2>O coração como fonte</h2>
+      <p>"Porque dele procedem as fontes da vida", diz o texto. O coração não é apenas um órgão — é o centro decisório do ser humano. É de lá que saem os desejos, as escolhas, as lealdades.</p>
+      <blockquote>"Sobre tudo o que se deve guardar, guarda o coração, porque dele procedem as fontes da vida." — Provérbios 4:23</blockquote>
+      <h2>Dois reis possíveis</h2>
+      <p>No coração do homem, há sempre um trono. Ou reina o ego — com suas paixões, seus medos, sua auto-suficiência — ou reina Cristo, com sua graça, sua verdade, seu senhorio. Não há território neutro.</p>
+      <h2>A vigilância contínua</h2>
+      <p>Guardar o coração não é um ato único. É vigilância diária. É perguntar: o que estou deixando entrar? O que está moldando meus desejos? A quem estou ouvindo? Porque o que entra no coração, sai na vida.</p>`
+    },
+    {
+      id:'o-evangelho-puro',
+      title:'O evangelho puro de Cristo',
+      date:'30 de julho de 2026',
+      img:'https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&q=80',
+      tags:['evangelho','graca','missao'],
+      excerpt:'A missão de Homens do Reino não é erguer homens por motivação ou técnica, mas pelo evangelho puro.',
+      content:`<p>A missão de Homens do Reino não é erguer homens por motivação ou técnica, mas pelo evangelho puro de Cristo. Só a cruz regenera. Só a graça sustenta. Só a Palavra forma homens segundo o coração de Deus.</p>
+      <h2>Outro evangelho não há</h2>
+      <p>Paulo advertiu os gálatas: "Admiro-me de que tão depressa estejais desertando daquele que vos chamou na graça de Cristo para outro evangelho, o qual não é outro" (Gálatas 1:6-7). Há muitos "evangelhos" por aí — de performance, de prosperidade, de autoajuda. Mas só um regenera.</p>
+      <blockquote>"Porque não me envergonho do evangelho, pois é poder de Deus para salvação." — Romanos 1:16</blockquote>
+      <h2>Só a cruz regenera</h2>
+      <p>Nenhuma técnica, nenhum método, nenhum programa muda o coração. Só a cruz. Só o Espírito Santo aplicando a verdade de Cristo ao homem interior. Tudo o mais é reforma externa — a cruz é transformação interna.</p>
+      <h2>Só a graça sustenta</h2>
+      <p>O homem não se mantém de pé por esforço próprio. Se mantém pela graça. Dia após dia. A graça não é licença para pecar — é o combustível para viver. E só a Palavra forma, dia após dia, um homem segundo o coração de Deus.</p>`
+    }
+  ];
+
+  // ============ NAVEGAÇÃO ============
+  function navigate(pageId,postId){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    const target = document.getElementById(pageId);
+    if(target) target.classList.add('active');
+
+    document.querySelectorAll('.menu a').forEach(a=>{
+      a.classList.toggle('active', a.dataset.page===pageId);
+    });
+
+    document.getElementById('menu').classList.remove('open');
+
+    if(pageId==='post' && postId){
+      renderPost(postId);
+    }
+
+    window.scrollTo({top:0,behavior:'smooth'});
+    history.pushState({page:pageId,post:postId},'','#'+pageId+(postId?'/'+postId:''));
+  }
+
+  function toggleMenu(){
+    document.getElementById('menu').classList.toggle('open');
+  }
+
+  // ============ TEMA CLARO/ESCURO ============
+  function toggleTheme(){
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    document.getElementById('themeBtn').textContent = next === 'light' ? '☾' : '☀';
+  }
+  function initTheme(){
+    const saved = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+    document.getElementById('themeBtn').textContent = saved === 'light' ? '☾' : '☀';
+  }
+
+  // ============ RENDER POSTS ============
+  function renderPosts(containerId, limit, filterTag){
+    const container = document.getElementById(containerId);
+    if(!container) return;
+    let items = posts;
+    if(filterTag) items = posts.filter(p=>p.tags.includes(filterTag));
+    if(limit) items = items.slice(0,limit);
+    
+    if(items.length === 0){
+      container.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1;padding:3rem">Nenhuma reflexão encontrada nesta categoria.</p>';
+      return;
+    }
+    
+    container.innerHTML = items.map(p=>`
+      <article class="post-card" onclick="navigate('post','${p.id}')">
+        <img src="${p.img}" alt="${p.title}" loading="lazy">
+        <div class="post-card-body">
+          <div class="post-meta">${p.date} · Homens do Reino</div>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt}</p>
+          <div class="post-tags">
+            ${p.tags.map(t=>`<span class="tag" onclick="event.stopPropagation();filterByCategory('${t}')">${t}</span>`).join('')}
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  function renderPost(id){
+    const p = posts.find(x=>x.id===id);
+    if(!p) return;
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(p.title);
+    
+    document.getElementById('post-content').innerHTML = `
+      <span class="back" onclick="navigate('blog')">← Voltar ao blog</span>
+      <h1>${p.title}</h1>
+      <div class="meta">${p.date} · Homens do Reino</div>
+      <img class="cover" src="${p.img}" alt="${p.title}">
+      <article>${p.content}</article>
+      <div class="post-tags" style="margin-top:2rem">
+        ${p.tags.map(t=>`<span class="tag" onclick="navigate('blog');setTimeout(()=>filterByCategory('${t}'),100)">${t}</span>`).join('')}
+      </div>
+      <div class="share">
+        <span class="share-label">Compartilhe:</span>
+        <button class="share-btn" onclick="shareWhatsApp('${title}','${url}')">WhatsApp</button>
+        <button class="share-btn" onclick="shareFacebook('${url}')">Facebook</button>
+        <button class="share-btn" onclick="shareTwitter('${title}','${url}')">Twitter</button>
+        <button class="share-btn" onclick="copyLink('${url}')">🔗 Copiar link</button>
+      </div>
+    `;
+  }
+
+  // ============ CATEGORIAS ============
+  let currentCategory = null;
+  
+  function renderCategories(){
+    const allTags = [...new Set(posts.flatMap(p=>p.tags))].sort();
+    const container = document.getElementById('categories');
+    container.innerHTML = `
+      <button class="cat-btn ${!currentCategory?'active':''}" onclick="filterByCategory(null)">Todas</button>
+      ${allTags.map(t=>`<button class="cat-btn ${currentCategory===t?'active':''}" onclick="filterByCategory('${t}')">${t}</button>`).join('')}
+    `;
+  }
+
+  function filterByCategory(tag){
+    currentCategory = tag;
+    renderCategories();
+    renderPosts('blog-posts', null, tag);
+    if(document.getElementById('blog').classList.contains('active')){
+      document.getElementById('blog').scrollIntoView({behavior:'smooth'});
+    }
+  }
+
+  function filterPosts(){
+    const q = document.getElementById('searchInput').value.toLowerCase();
+    const container = document.getElementById('blog-posts');
+    let filtered = posts.filter(p=>
+      p.title.toLowerCase().includes(q) ||
+      p.excerpt.toLowerCase().includes(q) ||
+      p.tags.some(t=>t.includes(q))
+    );
+    if(currentCategory){
+      filtered = filtered.filter(p=>p.tags.includes(currentCategory));
+    }
+    if(filtered.length === 0){
+      container.innerHTML = '<p style="text-align:center;color:var(--muted);grid-column:1/-1;padding:3rem">Nenhuma reflexão encontrada.</p>';
+      return;
+    }
+    container.innerHTML = filtered.map(p=>`
+      <article class="post-card" onclick="navigate('post','${p.id}')">
+        <img src="${p.img}" alt="${p.title}" loading="lazy">
+        <div class="post-card-body">
+          <div class="post-meta">${p.date} · Homens do Reino</div>
+          <h3>${p.title}</h3>
+          <p>${p.excerpt}</p>
+          <div class="post-tags">
+            ${p.tags.map(t=>`<span class="tag" onclick="event.stopPropagation();filterByCategory('${t}')">${t}</span>`).join('')}
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // ============ COMPARTILHAMENTO ============
+  function shareWhatsApp(title,url){
+    window.open(`https://wa.me/?text=${title}%20${url}`,'_blank');
+  }
+  function shareFacebook(url){
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`,'_blank');
+  }
+  function shareTwitter(title,url){
+    window.open(`https://twitter.com/intent/tweet?text=${title}&url=${url}`,'_blank');
+  }
+  function copyLink(url){
+    const decoded = decodeURIComponent(url);
+    navigator.clipboard.writeText(decoded).then(()=>{
+      showToast('✓ Link copiado!');
+    });
+  }
+
+  // ============ TOAST ============
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),2500);
+  }
+
+  // ============ FORMULÁRIO (FORMSPREE) ============
+  function submitForm(e){
+    // Se o Formspree estiver configurado, deixa o form enviar normalmente
+    // Se não, apenas mostra feedback visual
+    const formId = e.target.action;
+    if(formId.includes('SEU_FORMSPREE_ID')){
+      e.preventDefault();
+      showToast('⚠ Configure o Formspree para enviar mensagens reais');
+      return;
+    }
+    showToast('✓ Mensagem enviada!');
+  }
+
+  // ============ NEWSLETTER ============
+  function subscribeNewsletter(e){
+    e.preventDefault();
+    const email = e.target.querySelector('input').value;
+    // Aqui você pode integrar com Mailchimp, ConvertKit, etc.
+    // Por enquanto, salva no localStorage como demo
+    const subs = JSON.parse(localStorage.getItem('newsletter')||'[]');
+    subs.push({email, date:new Date().toISOString()});
+    localStorage.setItem('newsletter', JSON.stringify(subs));
+    
+    document.getElementById('newsletterMsg').classList.add('show');
+    e.target.reset();
+    showToast('✓ Inscrito com sucesso!');
+    setTimeout(()=>document.getElementById('newsletterMsg').classList.remove('show'),5000);
+  }
+
+  // ============ INIT ============
+  initTheme();
+  renderPosts('home-posts',3);
+  renderPosts('blog-posts');
+  renderCategories();
+
+  window.addEventListener('load',()=>{
+    const hash = location.hash.replace('#','');
+    if(hash){
+      const parts = hash.split('/');
+      if(parts[1]) navigate('post', parts[1]);
+      else if(document.getElementById(parts[0])) navigate(parts[0]);
+    }
+  });
+  window.addEventListener('popstate',(e)=>{
+    if(e.state && e.state.page) navigate(e.state.page, e.state.post);
+  });
+</script>
+
+</body>
+</html>
