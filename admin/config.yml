@@ -1,0 +1,90 @@
+backend:
+  name: github
+  repo: SEU_USUARIO/SEU_REPOSITORIO  # Ex: joaosilva/homens-do-reino
+  branch: main
+  auth_type: pkce  # Autenticação moderna, sem token exposto
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Reflexões do Blog"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "blog/{{slug}}"
+    
+    # Regra obrigatória: Todo post deve estar alinhado a um pilar
+    fields:
+      - label: "Pilar (OBRIGATÓRIO)"
+        name: "pilar"
+        widget: "select"
+        options:
+          - { label: "Pilar I — Identidade em Cristo", value: "identidade-em-cristo" }
+          - { label: "Pilar II — Governança Espiritual no Lar", value: "governanca-espiritual" }
+          - { label: "Pilar III — Missão de Misericórdia", value: "missao-de-misericordia" }
+        required: true
+        hint: "Todo post deve estar alinhado a um dos três pilares"
+      
+      - label: "Título"
+        name: "title"
+        widget: "string"
+        required: true
+      
+      - label: "ID do Post (URL amigável)"
+        name: "id"
+        widget: "string"
+        hint: "Sem espaços, use hífens. Ex: homem-segundo-coracao"
+        required: true
+      
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+        format: "DD [de] MMMM [de] YYYY"
+        date_format: "DD [de] MMMM [de] YYYY"
+        required: true
+      
+      - label: "Imagem de Capa"
+        name: "img"
+        widget: "image"
+        required: true
+        hint: "URL do Unsplash ou upload local"
+      
+      - label: "Categorias (Tags)"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        required: true
+        hint: "Mínimo 2 categorias relacionadas ao pilar"
+      
+      - label: "Resumo (Excerpt)"
+        name: "excerpt"
+        widget: "text"
+        required: true
+        hint: "Máximo 150 caracteres. Aparece no card do blog."
+      
+      - label: "Conteúdo"
+        name: "content"
+        widget: "markdown"
+        required: true
+        buttons:
+          - bold
+          - italic
+          - link
+          - heading-one
+          - heading-two
+          - heading-three
+          - quote
+          - bulleted-list
+          - numbered-list
+        editor_components: []
+        hint: "Use Markdown. Blocos de citação bíblica use > antes do texto."
+      
+      - label: "Versículo Destaque"
+        name: "verse"
+        widget: "object"
+        fields:
+          - { label: "Texto", name: "text", widget: "text" }
+          - { label: "Referência", name: "ref", widget: "string" }
+        hint: "Versículo principal do post (opcional)"
