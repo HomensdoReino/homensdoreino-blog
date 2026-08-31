@@ -1,26 +1,22 @@
 ---
 ---
 
-// CORES MEDIEVAIS - Tons da época de Jesus
-$wood-dark: #2c1810;        // Madeira escura (carvalho)
-$wood-medium: #5d4037;      // Madeira média
-$wood-light: #8d6e63;       // Madeira clara
-$parchment: #d7ccc8;        // Pergaminho
-$parchment-light: #efebe9;  // Pergaminho claro
-$parchment-dark: #a1887f;   // Pergaminho escuro
-$metal: #424242;            // Metal enferrujado
-$gold: #c9a227;             // Dourado antigo
-$gold-light: #d4af37;       // Dourado claro
-$blood-red: #8b0000;        // Vermelho sangue (cruz)
-$stone: #757575;            // Pedra
-$text-dark: #1a1a1a;        // Texto escuro
-$text-light: #f5f5f5;       // Texto claro
+// CORES - TEMA CLARO (Blog JFA style)
+$bg-primary: #fbf6ee;        // Creme claro
+$bg-secondary: #ffffff;      // Branco
+$text-primary: #1a1a1a;      // Texto escuro
+$text-secondary: #5d4037;    // Marrom suave
+$text-muted: #6b7280;        // Cinza suave
+$accent: #8b3a3a;            // Vermelho vinho
+$accent-light: #d4af37;      // Dourado
+$border: #e5e7eb;            // Bordas claras
+$panel: #f9f5f0;             // Painel creme
 
 // FONTES
 $font-main: 'Garamond', 'Times New Roman', serif;
 $font-header: 'Cormorant Garamond', 'Garamond', serif;
 
-// RESET E BASE
+// RESET
 * {
   margin: 0;
   padding: 0;
@@ -28,421 +24,240 @@ $font-header: 'Cormorant Garamond', 'Garamond', serif;
 }
 
 body {
-  background: 
-    linear-gradient(rgba(44, 24, 16, 0.92), rgba(44, 24, 16, 0.92)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%235d4037' width='200' height='200'/%3E%3Cpath fill='%233e2723' d='M0 0h200v200H0z' opacity='0.6'/%3E%3C/svg%3E");
-  background-attachment: fixed;
+  background: $bg-primary;
+  color: $text-primary;
   font-family: $font-main;
-  color: $parchment-light;
-  line-height: 1.7;
-  margin: 0;
-  padding: 0;
+  line-height: 1.6;
 }
 
-// HEADER MEDIEVAL
+// HEADER
 header {
-  background: linear-gradient(135deg, $wood-dark 0%, $wood-medium 50%, $wood-dark 100%);
-  border-bottom: 4px solid $metal;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.8);
-  padding: 2rem 1rem;
-  text-align: center;
-  position: relative;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, $gold, transparent);
-  }
-}
-
-header h1 {
-  color: $gold;
-  font-family: $font-header;
-  font-size: 3rem;
-  margin: 0;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  background: rgba(251, 246, 238, 0.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid $border;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 60;
 }
 
 header nav {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 2px solid $metal;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 header nav a {
-  color: $parchment;
-  margin: 0 1.5rem;
+  color: $text-secondary;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  position: relative;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
   
   &:hover {
-    color: $gold;
-    text-shadow: 0 0 8px rgba(201, 162, 39, 0.6);
+    color: $accent;
   }
-}
-
-// CONTAINER PRINCIPAL
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
 }
 
 // HERO SECTION
-.hero {
+.hero-section {
   text-align: center;
-  margin-bottom: 4rem;
-  padding: 2rem;
-  background: linear-gradient(135deg, rgba(93, 64, 55, 0.6) 0%, rgba(44, 24, 16, 0.8) 100%);
-  border: 3px solid $metal;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.7);
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
   
-  h2 {
-    color: $gold;
+  h1 {
     font-family: $font-header;
-    font-size: 2.2rem;
+    font-size: 3rem;
+    color: $text-primary;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    line-height: 1.2;
   }
   
   p {
-    color: $parchment;
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 1.25rem;
+    color: $text-muted;
+    font-style: italic;
   }
 }
 
-// GRID DE POSTS - ESTILO JFA
-.posts-grid {
+// PILARES DESTAQUE
+.pilares-destaque {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2.5rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
 }
 
-// CARD DE POST - MEDIEVAL
-.post-card {
-  background: linear-gradient(135deg, $wood-medium 0%, $wood-light 100%);
-  border: 3px solid $metal;
+.pilar-card {
+  background: $bg-secondary;
+  border: 2px solid $border;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-  transition: all 0.4s ease;
-  position: relative;
-  
-  &::before {
-    content: '✝';
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: $gold;
-    font-size: 1.5rem;
-    opacity: 0.6;
-    z-index: 1;
-  }
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
   
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.9);
-    border-color: $gold;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+  }
+  
+  h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $text-muted;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-family: $font-header;
+    font-size: 1.4rem;
+    color: $text-primary;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: $text-muted;
+    font-style: italic;
+  }
+}
+
+// GRID DE POSTS
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.post-card {
+  background: $bg-secondary;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid $border;
+  transition: all 0.3s;
+  
+  &:hover {
+    box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    transform: translateY(-6px);
   }
 }
 
 .post-image {
   width: 100%;
-  height: 220px;
+  height: 280px;
   object-fit: cover;
-  border-bottom: 3px solid $metal;
 }
 
 .post-content {
-  padding: 1.8rem;
+  padding: 2rem;
 }
 
 .post-meta {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: $text-muted;
   margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: $parchment-dark;
-  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  
-  time {
-    color: $gold;
-  }
+  letter-spacing: 0.05em;
 }
 
-.post-title {
-  color: $gold;
+.post-content h2 {
   font-family: $font-header;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  color: $text-primary;
   margin-bottom: 1rem;
   line-height: 1.3;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
 }
 
-.post-excerpt {
-  color: $parchment;
-  font-size: 1rem;
+.post-content p {
+  color: $text-secondary;
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
 .read-more {
-  display: inline-block;
-  color: $gold;
+  color: $accent;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1.05rem;
-  border-bottom: 2px solid $gold;
-  padding-bottom: 3px;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-bottom: 2px solid $accent;
+  padding-bottom: 2px;
+  transition: all 0.3s;
   
   &:hover {
-    color: $gold-light;
-    border-color: $gold-light;
-    text-shadow: 0 0 8px rgba(201, 162, 39, 0.6);
+    color: darken($accent, 10%);
+    border-color: darken($accent, 10%);
   }
 }
 
-// CATEGORIAS/TAGS
 .post-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  padding: 1.2rem 1.8rem;
-  border-top: 2px solid rgba(66, 66, 66, 0.5);
-  
-  a {
-    background: rgba(44, 24, 16, 0.7);
-    color: $parchment;
-    padding: 0.4rem 0.9rem;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    border: 1px solid $metal;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      background: $gold;
-      color: $wood-dark;
-      border-color: $gold;
-    }
-  }
+  padding: 0 2rem 2rem;
+}
+
+.tag {
+  background: $panel;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: $text-muted;
+  border: 1px solid $border;
 }
 
 // PAGINAÇÃO
 .pagination {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
   margin: 4rem 0;
   
   a {
-    background: linear-gradient(135deg, $wood-medium 0%, $wood-dark 100%);
-    color: $parchment;
-    padding: 0.9rem 2rem;
-    border-radius: 8px;
+    background: $accent;
+    color: white;
+    padding: 0.9rem 2.5rem;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    border: 2px solid $metal;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s;
     
     &:hover {
-      background: $gold;
-      color: $wood-dark;
-      border-color: $gold;
+      background: darken($accent, 10%);
       transform: translateY(-2px);
     }
   }
 }
 
-// GRID DE PILARES
-.pilares-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  margin: 3rem 0;
-}
-
-.pilar-section {
-  background: linear-gradient(135deg, rgba(62, 39, 35, 0.4) 0%, rgba(44, 24, 16, 0.6) 100%);
-  border: 3px solid $metal;
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-}
-
-.pilar-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 3px solid $gold;
-}
-
-.pilar-numero {
-  display: inline-block;
-  background: $gold;
-  color: $wood-dark;
-  padding: 0.5rem 1.5rem;
-  border-radius: 20px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 1rem;
-}
-
-.pilar-titulo {
-  color: $gold;
-  font-family: $font-header;
-  font-size: 2rem;
-  margin: 0.5rem 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-.pilar-versiculo {
-  color: $parchment;
-  font-style: italic;
-  font-size: 1.1rem;
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.card-artigo {
-  background: linear-gradient(135deg, $wood-medium 0%, $wood-light 100%);
-  border: 2px solid $metal;
-  border-radius: 12px;
-  padding: 1.8rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  
-  &::before {
-    content: '✝';
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    color: $gold;
-    font-size: 1.2rem;
-    opacity: 0.5;
-  }
-  
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.7);
-    border-color: $gold;
-  }
-}
-
-.card-conteudo h3 {
-  color: $gold;
-  font-family: $font-header;
-  font-size: 1.4rem;
-  margin: 0 0 1rem 0;
-  padding-right: 2rem;
-  line-height: 1.3;
-}
-
-.card-conteudo p {
-  color: $parchment;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-}
-
-.card-link {
-  display: inline-block;
-  color: $gold;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
-  border-bottom: 2px solid $gold;
-  padding-bottom: 2px;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    color: $gold-light;
-    border-color: $gold-light;
-  }
-}
-
-// FOOTER MEDIEVAL
+// FOOTER
 footer {
-  background: linear-gradient(135deg, $wood-dark 0%, $wood-medium 100%);
-  border-top: 4px solid $metal;
-  padding: 3rem 1.5rem;
-  text-align: center;
-  color: $parchment;
-  margin-top: 4rem;
+  background: #1a1a1a;
+  color: #c9bcab;
+  padding: 4rem 2rem 2rem;
+  margin-top: 6rem;
   
   p {
-    margin: 0.5rem 0;
+    color: #9a8e7c;
+    font-size: 0.9rem;
   }
 }
 
 // RESPONSIVO
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2rem;
-  }
-  
-  .hero h2 {
-    font-size: 1.6rem;
-  }
-  
+@media (max-width: 968px) {
+  .pilares-destaque,
   .posts-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
   
-  .post-title {
-    font-size: 1.4rem;
+  .hero-section h1 {
+    font-size: 2rem;
   }
-  
-  .pilar-section {
-    padding: 1.5rem;
-  }
-  
-  .pilar-titulo {
-    font-size: 1.6rem;
-  }
-  
-  .cards-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-// ANIMAÇÕES
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.post-card {
-  animation: fadeIn 0.6s ease-out;
 }
