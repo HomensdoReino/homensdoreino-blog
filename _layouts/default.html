@@ -3,30 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title>{{ page.title }} | Homens do Reino</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Garamond&display=swap" rel="stylesheet">
-  {% seo %}
 </head>
 <body>
   <header>
-    <h1><a href="{{ '/' | relative_url }}">Homens do Reino</a></h1>
     <nav>
       <a href="{{ '/' | relative_url }}">Início</a>
+      <a href="{{ '/sobre' | relative_url }}">Sobre</a>
       <a href="{{ '/blog' | relative_url }}">Blog</a>
+      <a href="{{ '/pilares' | relative_url }}">Pilares</a>
       <a href="{{ '/radio' | relative_url }}">Rádio</a>
-      <a href="{{ '/about' | relative_url }}">Sobre</a>
     </nav>
   </header>
 
-  <main class="container">
+  <main>
     {{ content }}
   </main>
 
-  <footer>
-    <p>&copy; {{ 'now' | date: "%Y" }} Homens do Reino. Todos os direitos reservados à Palavra de Deus.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Erguendo homens segundo o evangelho de Cristo Jesus</p>
+  <footer style="text-align: center; padding: 2rem;">
+    <p>&copy; 2026 Homens do Reino. Todos os direitos reservados à Palavra de Deus.</p>
   </footer>
 </body>
 </html>
