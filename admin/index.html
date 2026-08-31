@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Homens do Reino</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      background: #0f0d0b;
+      color: #ece5db;
+      font-family: Georgia, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    .loading {
+      max-width: 400px;
+    }
+    .loading h1 {
+      color: #c9a24a;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    .loading p {
+      color: #a89c8c;
+      font-style: italic;
+    }
+    .cross {
+      color: #c9a24a;
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="loading" id="loading">
+    <span class="cross">✝</span>
+    <h1>Homens do Reino</h1>
+    <p>Carregando painel administrativo...</p>
+  </div>
+  
+  <!-- Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <script>
+    // Oculta mensagem de loading quando CMS carregar
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const loading = document.getElementById('loading');
+        if (loading) loading.style.display = 'none';
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
