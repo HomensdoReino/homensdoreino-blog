@@ -6,25 +6,70 @@
   <title>{{ page.title }} | Homens do Reino</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Garamond&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Garamond&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="{{ '/' | relative_url }}">Início</a>
-      <a href="{{ '/sobre' | relative_url }}">Sobre</a>
-      <a href="{{ '/blog' | relative_url }}">Blog</a>
-      <a href="{{ '/pilares' | relative_url }}">Pilares</a>
-      <a href="{{ '/radio' | relative_url }}">Rádio</a>
-    </nav>
+
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="logo">
+        <span class="logo-icon">✝</span>
+        <span class="logo-text">Homens <span class="logo-destaque">do Reino</span></span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/blog">Blog</a>
+        <a href="/pilares">Pilares</a>
+        <a href="/contato">Contato</a>
+        <a href="/#chamado" class="btn-chamado">Responder ao Chamado</a>
+      </nav>
+    </div>
   </header>
 
   <main>
     {{ content }}
   </main>
 
-  <footer style="text-align: center; padding: 2rem;">
-    <p>&copy; 2026 Homens do Reino. Todos os direitos reservados à Palavra de Deus.</p>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="logo-icon">✝</span>
+        <span class="logo-text">Homens do Reino</span>
+        <p>"Levantar uma geração de homens segundo o coração de Deus…" — 1 Timóteo 3:4-5</p>
+        <p>Erguer homens através do evangelho puro de Cristo. — Tiago 1:27</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navegação</h4>
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/blog">Blog</a>
+        <a href="/pilares">Pilares</a>
+        <a href="/contato">Contato</a>
+      </div>
+
+      <div class="footer-pilares">
+        <h4>Pilares</h4>
+        <p>Identidade em Cristo — Gênesis 1:26-27</p>
+        <p>Governança Espiritual no Lar — Josué 24:15</p>
+        <p>Missão de Misericórdia — Isaías 1:17</p>
+      </div>
+
+      <div class="footer-contato">
+        <h4>Contato</h4>
+        <a href="mailto:contato@homensdoreino.com.br">contato@homensdoreino.com.br</a>
+        <a href="https://www.homensdoreino.com.br">www.homensdoreino.com.br</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Homens do Reino. Todos os direitos reservados à Palavra de Deus.</p>
+      <p><a href="/privacidade">Privacidade</a> · <a href="/termos">Termos</a></p>
+    </div>
   </footer>
+
 </body>
 </html>
