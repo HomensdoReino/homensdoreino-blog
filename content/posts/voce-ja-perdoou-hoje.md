@@ -3,7 +3,7 @@ pilar: identidade-em-cristo
 title: "Você já perdoou hoje"
 id: "voce-ja-perdoou-hoje"
 date: "25 de setembro de 2026"
-img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+img: "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800&q=80"
 tags:
   - identidade-em-cristo
   - graca
