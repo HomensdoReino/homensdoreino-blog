@@ -46,7 +46,6 @@
   img{max-width:100%;display:block}
   a{color:var(--gold);text-decoration:none;transition:color .2s}
   a:hover{color:var(--gold-soft)}
-
   /* Header */
   header{
     position:sticky;top:0;z-index:50;
@@ -91,12 +90,10 @@
   }
   .theme-toggle:hover{border-color:var(--gold);color:var(--gold)}
   .burger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
-
   /* Pages */
   .page{display:none;animation:fade .4s ease}
   .page.active{display:block}
   @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-
   /* Hero */
   .hero{
     position:relative;
@@ -140,7 +137,6 @@
   .btn:hover{background:var(--gold-soft);color:#1a1714}
   .btn-ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
   .btn-ghost:hover{background:var(--gold);color:#1a1714}
-
   /* Sections */
   section{padding:5rem 1.5rem}
   .container{max-width:1200px;margin:0 auto}
@@ -153,7 +149,6 @@
     display:block;margin-bottom:.8rem;
   }
   .section-title h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400}
-
   /* Pilares */
   .pilares-grid{
     display:grid;
@@ -177,7 +172,6 @@
   }
   .pilar h3{font-size:1.4rem;margin-bottom:1rem;font-weight:400}
   .pilar .verse{color:var(--muted);font-style:italic;font-size:.95rem}
-
   /* Blog */
   .blog-header{
     background:var(--bg-soft);
@@ -216,7 +210,6 @@
   .cat-btn:hover,.cat-btn.active{
     background:var(--gold);color:#1a1714;border-color:var(--gold);
   }
-
   .posts{
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
@@ -257,7 +250,6 @@
     cursor:pointer;transition:all .2s;
   }
   .tag:hover{background:var(--gold);color:#1a1714}
-
   /* Post Full */
   .post-full{max-width:780px;margin:0 auto;padding:4rem 1.5rem}
   .post-full .back{
@@ -283,7 +275,6 @@
     background:var(--surface);
   }
   .post-full article h2{font-size:1.6rem;margin:2.5rem 0 1rem;font-weight:400}
-
   /* Share */
   .share{
     margin-top:3rem;padding-top:2rem;
@@ -306,7 +297,6 @@
     display:inline-flex;align-items:center;gap:.4rem;
   }
   .share-btn:hover{background:var(--gold);color:#1a1714;border-color:var(--gold)}
-
   /* Newsletter */
   .newsletter{
     background:var(--bg-soft);
@@ -334,7 +324,6 @@
     display:none;
   }
   .newsletter-msg.show{display:block}
-
   /* Sobre */
   .about{max-width:900px;margin:0 auto}
   .about-hero{text-align:center;padding:4rem 1.5rem 2rem}
@@ -356,7 +345,6 @@
     font-family:'Helvetica',sans-serif;
     font-size:.85rem;letter-spacing:1px;
   }
-
   /* Contato */
   .contact{max-width:600px;margin:0 auto;padding:4rem 1.5rem}
   .contact h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:400;text-align:center;margin-bottom:1rem}
@@ -376,7 +364,6 @@
   }
   .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--gold)}
   .form-group textarea{min-height:140px;resize:vertical}
-
   /* Chamado */
   .chamado{
     background:
@@ -391,7 +378,6 @@
   }
   .chamado h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;margin-bottom:1.5rem}
   .chamado p{color:var(--muted);max-width:600px;margin:0 auto 2rem;font-size:1.1rem}
-
   /* Footer */
   footer{
     background:var(--bg-soft);
@@ -426,7 +412,6 @@
   }
   .footer-bottom a{color:var(--muted)}
   .footer-bottom a:hover{color:var(--gold)}
-
   /* Toast */
   .toast{
     position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);
@@ -441,7 +426,6 @@
     z-index:100;
   }
   .toast.show{opacity:1;transform:translateX(-50%) translateY(-8px)}
-
   /* Responsive */
   @media(max-width:768px){
     .menu{
@@ -467,7 +451,6 @@
 </style>
 </head>
 <body>
-
 <header>
   <nav class="nav">
     <div class="logo" onclick="navigate('home')">
@@ -485,7 +468,6 @@
     </ul>
   </nav>
 </header>
-
 <!-- HOME -->
 <main id="home" class="page active">
   <section class="hero">
@@ -496,7 +478,6 @@
       <a class="btn btn-ghost" style="margin-left:.8rem" onclick="navigate('pilares')">Conhecer os pilares</a>
     </div>
   </section>
-
   <section>
     <div class="container">
       <div class="section-title">
@@ -522,7 +503,6 @@
       </div>
     </div>
   </section>
-
   <section style="background:var(--bg-soft)">
     <div class="container">
       <div class="section-title">
@@ -536,7 +516,6 @@
     </div>
   </section>
 </main>
-
 <!-- SOBRE -->
 <main id="sobre" class="page">
   <div class="about">
@@ -564,7 +543,6 @@
     </div>
   </div>
 </main>
-
 <!-- BLOG -->
 <main id="blog" class="page">
   <div class="blog-header">
@@ -588,12 +566,10 @@
     <div class="newsletter-msg" id="newsletterMsg">✓ Inscrição registrada. Que o Senhor lhe abençoe.</div>
   </div>
 </main>
-
 <!-- POST INDIVIDUAL -->
 <main id="post" class="page">
   <div class="post-full" id="post-content"></div>
 </main>
-
 <!-- PILARES -->
 <main id="pilares" class="page">
   <div class="about">
@@ -609,7 +585,6 @@
       </div>
       <p>A dignidade do homem não vem de seus feitos, mas de sua origem. Fomos criados à imagem de Deus — e em Cristo, o segundo Adão, essa imagem é restaurada. Antes de qualquer papel, título ou função, o homem é, primeiramente, uma criatura amada e redimida.</p>
       <p>Identidade em Cristo significa guardar o coração (Provérbios 4:23), carregar a coroa de espinhos antes da coroa de glória, e reconhecer que o trono verdadeiro é a cruz — e o governo, o serviço.</p>
-
       <h2>Pilar II — Governança Espiritual no Lar</h2>
       <div class="verse-box">
         "Eu e a minha casa serviremos ao Senhor."
@@ -617,7 +592,6 @@
       </div>
       <p>Governança espiritual no lar não é autoritarismo. É liderança servil que escolhe, ensina e protege a fé sob o próprio teto. É o homem que decide que a presença de Deus terá lugar central em sua casa — na mesa, na oração noturna, na leitura da Escritura.</p>
       <p>Como disse Paulo a Timóteo: se alguém não sabe governar a própria casa, como cuidará da igreja? O altar no centro da casa é o primeiro ato de um homem do Reino.</p>
-
       <h2>Pilar III — Missão de Misericórdia</h2>
       <div class="verse-box">
         "Aprendei a fazer o bem; buscai a justiça; repreendei ao opressor; defendei o órfão, pleiteai a causa da viúva."
@@ -628,13 +602,11 @@
     </div>
   </div>
 </main>
-
 <!-- CONTATO -->
 <main id="contato" class="page">
   <div class="contact">
     <h1>Fale conosco</h1>
     <p>Envie sua mensagem, pedido de oração ou dúvida.</p>
-    <!-- ⚠️ SUBSTITUA SEU_FORMSPREE_ID pelo seu ID real do Formspree -->
     <form id="contact-form" onsubmit="sendForm(event)">
       <div class="form-group">
         <label for="nome">Nome</label>
@@ -657,7 +629,6 @@
     </div>
   </div>
 </main>
-
 <!-- CHAMADO -->
 <main id="chamado" class="page">
   <section class="chamado">
@@ -667,7 +638,6 @@
     <a class="btn btn-ghost" style="margin-left:.8rem" onclick="navigate('pilares')">Conhecer os pilares</a>
   </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -707,12 +677,28 @@
     </div>
   </div>
 </footer>
-
 <div class="toast" id="toast"></div>
-
 <script>
-   // ============ CARREGAMENTO DE POSTS VIA CMS ============
+  // ============ CARREGAMENTO DE POSTS VIA CMS ============
   let posts = [];
+
+  // Converte data em português para objeto Date
+  // Formato esperado: "18 de agosto de 2026"
+  function parseDatePT(dateStr) {
+    if (!dateStr) return new Date(0);
+    const months = {
+      'janeiro': 0, 'fevereiro': 1, 'março': 2, 'abril': 3,
+      'maio': 4, 'junho': 5, 'julho': 6, 'agosto': 7,
+      'setembro': 8, 'outubro': 9, 'novembro': 10, 'dezembro': 11
+    };
+    const match = dateStr.toLowerCase().match(/(\d{1,2})\s+de\s+(\w+)\s+de\s+(\d{4})/);
+    if (!match) return new Date(0);
+    const day = parseInt(match[1], 10);
+    const month = months[match[2]];
+    const year = parseInt(match[3], 10);
+    if (month === undefined) return new Date(0);
+    return new Date(year, month, day);
+  }
 
   async function loadPosts() {
     try {
@@ -734,7 +720,7 @@
       posts = contents.map(parseMarkdownPost).filter(p => p && p.id);
       
       // Ordena por data (mais recente primeiro)
-      posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+      posts.sort((a, b) => parseDatePT(b.date) - parseDatePT(a.date));
       
       // Renderiza os posts na página
       renderPosts('home-posts', 3);
@@ -746,7 +732,8 @@
       showToast('⚠ Erro ao carregar reflexões');
     }
   }
-    function parseMarkdownPost(content) {
+
+  function parseMarkdownPost(content) {
     // Separa o cabeçalho (frontmatter) do conteúdo
     const parts = content.split('---');
     if (parts.length < 3) return null;
@@ -820,21 +807,16 @@
     document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
     const target = document.getElementById(pageId);
     if(target) target.classList.add('active');
-
     document.querySelectorAll('.menu a').forEach(a=>{
       a.classList.toggle('active', a.dataset.page===pageId);
     });
-
     document.getElementById('menu').classList.remove('open');
-
     if(pageId==='post' && postId){
       renderPost(postId);
     }
-
     window.scrollTo({top:0,behavior:'smooth'});
     history.pushState({page:pageId,post:postId},'','#'+pageId+(postId?'/'+postId:''));
   }
-
   function toggleMenu(){
     document.getElementById('menu').classList.toggle('open');
   }
@@ -881,7 +863,7 @@
     `).join('');
   }
 
-    function renderPost(id) {
+  function renderPost(id) {
     const p = posts.find(x => x.id === id);
     if (!p) return;
     
@@ -937,7 +919,6 @@
       ${allTags.map(t=>`<button class="cat-btn ${currentCategory===t?'active':''}" onclick="filterByCategory('${t}')">${t}</button>`).join('')}
     `;
   }
-
   function filterByCategory(tag){
     currentCategory = tag;
     renderCategories();
@@ -946,7 +927,6 @@
       document.getElementById('blog').scrollIntoView({behavior:'smooth'});
     }
   }
-
   function filterPosts(){
     const q = document.getElementById('searchInput').value.toLowerCase();
     const container = document.getElementById('blog-posts');
@@ -1002,25 +982,10 @@
     setTimeout(()=>t.classList.remove('show'),2500);
   }
 
-  // ============ FORMULÁRIO (FORMSPREE) ============
-  function submitForm(e){
-    // Se o Formspree estiver configurado, deixa o form enviar normalmente
-    // Se não, apenas mostra feedback visual
-    const formId = e.target.action;
-    if(formId.includes('SEU_FORMSPREE_ID')){
-      e.preventDefault();
-      showToast('⚠ Configure o Formspree para enviar mensagens reais');
-      return;
-    }
-    showToast('✓ Mensagem enviada!');
-  }
-
   // ============ NEWSLETTER ============
   function subscribeNewsletter(e){
     e.preventDefault();
     const email = e.target.querySelector('input').value;
-    // Aqui você pode integrar com Mailchimp, ConvertKit, etc.
-    // Por enquanto, salva no localStorage como demo
     const subs = JSON.parse(localStorage.getItem('newsletter')||'[]');
     subs.push({email, date:new Date().toISOString()});
     localStorage.setItem('newsletter', JSON.stringify(subs));
@@ -1032,10 +997,9 @@
   }
 
   // ============ INIT ============
-  // Carrega posts do CMS
   loadPosts();
-
   window.addEventListener('load',()=>{
+    initTheme();
     const hash = location.hash.replace('#','');
     if(hash){
       const parts = hash.split('/');
@@ -1055,7 +1019,6 @@
     const submitBtn = document.getElementById('submit-btn');
     const formMsg = document.getElementById('form-msg');
   
-    // Desabilita botão durante envio
     const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
@@ -1102,6 +1065,5 @@
     }
   }
 </script>
-
 </body>
 </html>
