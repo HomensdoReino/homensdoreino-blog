@@ -3,7 +3,7 @@ pilar: identidade-em-cristo
 title: "Sejam homens de coragem"
 id: "sejam-homens-de-coragem"
 date: "30 de setembro de 2026"
-img: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&q=80"
+img: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80"
 tags:
   - identidade-em-cristo
   - vigilancia
@@ -35,3 +35,12 @@ A NVI traduz o chamado de Paulo com clareza: sejam homens de coragem. Não é br
 A última ordem revela a fonte da força. “Finalmente, fortaleçam-se no Senhor e no seu forte poder” (Efésios 6:10). O homem do Reino não se sustenta por motivação nem por disciplina isolada. Sustenta-se pela graça que o regenerou e pelo Espírito que o capacita. Força bíblica é dependência. É reconhecer, com Jesus: “sem mim vocês não podem fazer coisa alguma” (João 15:5).
 
 O chamado permanece o mesmo: vigiar, permanecer na fé, ser homem de coragem e fortalecer-se no Senhor. Não para impressionar o mundo — para servir a Cristo e governar bem o que Ele confiou às nossas mãos.
+
+## Oração
+
+Senhor Jesus, Tu és a nossa força e a nossa coragem.
+Perdoa a nossa negligência e desperta-nos para vigiar.
+Faze-nos firmes na fé do evangelho, não em nós mesmos.
+Dá-nos coragem para temer a Deus mais do que aos homens.
+Fortalece-nos no Teu poder, pois sem Ti nada podemos fazer.
+Em Teu nome. Amém.
