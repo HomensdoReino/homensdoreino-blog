@@ -3,7 +3,7 @@ pilar: identidade-em-cristo
 title: "Sejam homens de coragem"
 id: "sejam-homens-de-coragem"
 date: "30 de setembro de 2026"
-img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+img:"https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80"
 tags:
   - identidade-em-cristo
   - vigilancia
