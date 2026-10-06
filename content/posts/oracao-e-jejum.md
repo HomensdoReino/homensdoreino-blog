@@ -3,7 +3,7 @@ pilar: identidade-em-cristo
 title: "Oração e Jejum: A Arma Esquecida dos Tempos Atuais"
 id: "oracao-e-jejum"
 date: "06 de outubro de 2026"
-img: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=800&q=80"
+img: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&q=80"
 tags:
   - identidade-em-cristo
   - oracao
