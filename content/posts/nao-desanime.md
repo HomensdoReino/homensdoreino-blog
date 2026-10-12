@@ -3,7 +3,7 @@ pilar: identidade-em-cristo
 title: "Não desanime"
 id: "nao-desanime"
 date: "12 de outubro de 2026"
-img: "https://raw.githubusercontent.com/HomensdoReino/homensdoreino-blog/main/assets/images/nao-desanime.jpg"
+img: "img: "https://raw.githubusercontent.com/HomensdoReino/homensdoreino-blog/main/assets/images/nao-desanime.jpg"
 tags:
   - identidade-em-cristo
   - perseveranca
