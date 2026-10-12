@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post LinkedIn - Homens do Reino</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    background: #2a2520;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Georgia', serif;
+  }
+  
+  /* Container da imagem - proporção LinkedIn (1200x1200) */
+  .post-image {
+    width: 600px;
+    height: 600px;
+    background: 
+      radial-gradient(ellipse at top, rgba(201,162,74,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(139,30,30,0.05) 0%, transparent 50%),
+      #0f0d0b;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Textura sutil de papel */
+  .post-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255,255,255,0.01) 2px,
+        rgba(255,255,255,0.01) 4px
+      );
+    pointer-events: none;
+  }
+  
+  /* Borda dourada sutil */
+  .post-image::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(201,162,74,0.2);
+    pointer-events: none;
+  }
+  
+  /* Ícone da Bíblia/Cruz no topo */
+  .icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(201,162,74,0.1);
+    border: 1px solid rgba(201,162,74,0.3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .icon svg {
+    width: 28px;
+    height: 28px;
+    fill: #c9a24a;
+  }
+  
+  /* Versículo */
+  .verse {
+    color: #ece5db;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 480px;
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+  }
+  
+  /* Linha separadora dourada */
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: #c9a24a;
+    margin: 2.5rem 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Referência bíblica */
+  .reference {
+    color: #c9a24a;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Logo no rodapé */
+  .brand {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+  }
+  
+  .brand-cross {
+    color: #c9a24a;
+    font-size: 1.2rem;
+  }
+  
+  .brand-name {
+    color: rgba(236,229,219,0.6);
+    font-family: 'Helvetica', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  /* Instruções (não aparecem na imagem) */
+  .instructions {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    max-width: 300px;
+  }
+  
+  .instructions strong {
+    color: #c9a24a;
+  }
+</style>
+</head>
+<body>
+
+<div class="instructions">
+  <strong>📸 Como salvar a imagem:</strong><br><br>
+  1. Tire um print desta tela (Win+Shift+S ou Cmd+Shift+4)<br>
+  2. Recorte apenas o quadrado central<br>
+  3. Use no LinkedIn<br><br>
+  <strong>Dica:</strong> Zoom 100% para melhor qualidade
+</div>
+
+<!-- IMAGEM DO POST -->
+<div class="post-image">
+  
+  <!-- Ícone: Bíblia com cruz -->
+  <div class="icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 4H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zM10 18H7a.5.5 0 0 1-.5-.5v-11A.5.5 0 0 1 7 6h3v12zm9 0h-7V6h7v12z"/>
+      <path d="M12 8v8M9 11h6" stroke="#c9a24a" stroke-width="1.5" fill="none"/>
+    </svg>
+  </div>
+  
+  <!-- Versículo -->
+  <div class="verse">
+    "Sede vigilantes, estai firmes na fé, portai-vos varonilmente, sede fortes."
+  </div>
+  
+  <!-- Divisor -->
+  <div class="divider"></div>
+  
+  <!-- Referência -->
+  <div class="reference">1 Coríntios 16:13</div>
+  
+  <!-- Marca -->
+  <div class="brand">
+    <div class="brand-cross">✝</div>
+    <div class="brand-name">Homens do Reino</div>
+  </div>
+  
+</div>
+
+</body>
+</html>
