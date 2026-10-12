@@ -3,7 +3,7 @@ pilar: identidade-em-cristo
 title: "Guardai o vosso coração"
 id: "guardai-o-coracao"
 date: "04 de agosto de 2026"
-img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+img: "assets/images/guardai-o-coracao.jpg"
 tags:
   - identidade-em-cristo
   - coracao
