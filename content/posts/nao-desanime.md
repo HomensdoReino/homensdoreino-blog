@@ -1,14 +1,14 @@
 ---
-pilar: identidade-em-cristo
-title: "Não desanime"
-id: "nao-desanime"
+id: nao-desanime
+title: "Não Desanime: A Força na Espera do Senhor"
 date: "12 de outubro de 2026"
+excerpt: "Jesus nos disse: 'Tenham ânimo! Eu venci o mundo.' Em meio às lutas, nossa identidade em Cristo é a fonte de paz e coragem para não desanimar."
 img: "/assets/images/nao-desanime.jpg"
 tags:
-  - identidade-em-cristo
-  - perseveranca
-  - esperança
-excerpt: "Jesus nos disse: 'Tenham ânimo! Eu venci o mundo.' Em meio às lutas, nossa identidade em Cristo é a fonte de paz e coragem para não desanimar."
+  - "Identidade em Cristo"
+  - "Perseverança"
+  - "Esperança"
+pilar: "identidade-em-cristo"
 verse:
   text: "Eu lhes disse essas coisas para que em mim vocês tenham paz. Neste mundo vocês terão sofrimentos. Mas tenham ânimo! Eu venci o mundo."
   ref: "João 16:33"
@@ -48,10 +48,7 @@ O desânimo é temporário. A vitória de Cristo é eterna. Levante-se, homem do
 
 ## Oração
 
-Pai, eu reconheço que tenho olhado para o tamanho dos problemas em vez de olhar para o tamanho do Senhor.
-Perdoa-me quando o desânimo toma conta do meu coração.
-Ajuda-me a lembrar que Jesus já venceu o mundo.
-Dá-me paz em meio à tormenta, ânimo em meio à luta.
-Que minha identidade em Cristo seja minha fonte de coragem.
-Eu não desisto, pois Tu estás comigo.
-Em nome de Jesus. Amém.
+Pai, eu reconheço que tenho olhado para o tamanho dos problemas em vez de olhar para o tamanho do Senhor. Perdoa-me quando o desânimo toma conta do meu coração. Ajuda-me a lembrar que Jesus já venceu o mundo. Dá-me paz em meio à tormenta, ânimo em meio à luta. Que minha identidade em Cristo seja minha fonte de coragem. Eu não desisto, pois Tu estás comigo. Em nome de Jesus. Amém.
+
+---
+*Se este conteúdo abençoou sua vida, compartilhe com outro irmão que precisa ouvir esta palavra.*
