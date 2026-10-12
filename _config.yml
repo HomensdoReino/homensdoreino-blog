@@ -1,0 +1,27 @@
+   # Configuração do Jekyll para Homens do Reino
+   title: "Homens do Reino"
+   description: "Erguendo homens segundo o evangelho"
+   url: "https://homensdoreino.com.br"
+   baseurl: ""
+   
+   # Configurações de build
+   markdown: kramdown
+   permalink: /:title/
+   
+   # Coleções
+   collections:
+     posts:
+       output: true
+       permalink: /blog/:title/
+   
+   # Configurações padrão
+   defaults:
+     - scope:
+         path: ""
+         type: "posts"
+       values:
+         layout: "post"
+     - scope:
+         path: ""
+       values:
+         layout: "default"
