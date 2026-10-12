@@ -3,7 +3,7 @@ pilar: missao-de-misericordia
 title: "O evangelho puro de Cristo"
 id: "o-evangelho-puro"
 date: "30 de julho de 2026"
-img: "img: "/assets/images/evangelho-puro.jpg""
+img:"/assets/images/evangelho-puro.jpg"
 tags:
   - evangelho
   - graca
