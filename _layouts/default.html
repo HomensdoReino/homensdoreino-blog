@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Homens do Reino</title>
+    <meta name="description" content="{{ page.description | default: 'Erguendo homens segundo o evangelho. Reflexões, estudos e chamados para uma geração de homens segundo o coração de Deus.' }}">
+    <meta name="author" content="Homens do Reino">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <meta property="og:title" content="{{ page.title }} | Homens do Reino">
+    <meta property="og:description" content="{{ page.description | default: 'Erguendo homens segundo o evangelho.' }}">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Homens do Reino">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | absolute_url }}">
+    <meta property="twitter:title" content="{{ page.title }} | Homens do Reino">
+    <meta property="twitter:description" content="{{ page.description | default: 'Erguendo homens segundo o evangelho.' }}">
+    
+    <!-- Google Analytics (automático em todas as páginas!) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4B0H1M9EDH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4B0H1M9EDH');
+    </script>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    {{ content }}
+</body>
+</html>
