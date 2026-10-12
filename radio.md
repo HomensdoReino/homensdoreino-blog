@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Rádio
-permalink: /radio/
+title: "Rádio Homens do Reino"
+description: "Rádio 24h com louvor, palavra e testemunho para edificar homens segundo o coração de Deus."
 ---
 
 # Rádio Homens do Reino
