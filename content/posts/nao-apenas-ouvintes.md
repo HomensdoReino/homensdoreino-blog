@@ -1,16 +1,16 @@
 ---
-pilar: missao-de-misericordia
-title: "Não apenas ouvintes"
-id: "nao-apenas-ouvintes"
+id: nao-apenas-ouvintes
+title: "Não Apenas Ouvintes: A Fé que Se Move em Misericórdia"
 date: "11 de agosto de 2026"
-img: "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80"
+excerpt: "Tiago 1:27 define a religião pura: visitar os órfãos e as viúvas nas suas tribulações. A fé que não se move em ação ainda não aprendeu o evangelho."
+img: "/assets/images/orfao-viuva.jpg"
 tags:
-  - missao-de-misericordia
-  - evangelho
-  - acao
-excerpt: "Tiago 1:27 define a religião pura: visitar os órfãos e as viúvas nas suas tribulações."
+  - "Missão de Misericórdia"
+  - "Evangelho"
+  - "Ação"
+pilar: "missao-de-misericordia"
 verse:
-  text: "A religião pura e sem mácula... é visitar os órfãos e as viúvas."
+  text: "A religião pura e sem mácula, para com Deus e Pai, é esta: visitar os órfãos e as viúvas nas suas tribulações e guardar-se da corrupção do mundo."
   ref: "Tiago 1:27"
 ---
 
@@ -29,3 +29,12 @@ O evangelho não é só crido — é andado. Jesus não morreu para nos dar uma 
 ## Homens que se movem
 
 O homem do Reino não é espectador. É participante. Não é apenas ouvinte — é praticante. E a prática mais pura, segundo Tiago, é a misericórdia em ação.
+
+## Conclusão: Saia do Lugar
+
+A fé verdadeira tem pés. Ela caminha em direção ao órfão, à viúva, ao necessitado. Não espera que o outro venha — ela vai. Não calcula riscos — ela ama. Não acumula conhecimento — ela distribui graça.
+
+**Hoje:** Identifique uma necessidade ao seu redor. Pode ser um vizinho idoso, um colega solitário, alguém em luto. Dê o primeiro passo. Visite. Ouça. Sirva. Isso é religião pura.
+
+---
+*Se este conteúdo abençoou sua vida, compartilhe com outro irmão que precisa ouvir esta palavra.*
