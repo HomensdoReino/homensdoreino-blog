@@ -1,14 +1,14 @@
 ---
-pilar: missao-de-misericordia
-title: "O evangelho puro de Cristo"
-id: "o-evangelho-puro"
+id: o-evangelho-puro
+title: "O Evangelho Puro de Cristo: A Única Fonte de Transformação"
 date: "30 de julho de 2026"
-img: "assets/images/o-evangelho-puro.jpg"
+excerpt: "A missão de Homens do Reino não é erguer homens por motivação ou técnica, mas pelo evangelho puro. Só a cruz regenera, só a graça sustenta."
+img: "/assets/images/evangelho-puro.jpg"
 tags:
-  - evangelho
-  - graca
-  - missao
-excerpt: "A missão de Homens do Reino não é erguer homens por motivação ou técnica, mas pelo evangelho puro."
+  - "Evangelho"
+  - "Graça"
+  - "Missão"
+pilar: "missao-de-misericordia"
 verse:
   text: "Porque não me envergonho do evangelho, pois é poder de Deus para salvação."
   ref: "Romanos 1:16"
@@ -29,3 +29,12 @@ Nenhuma técnica, nenhum método, nenhum programa muda o coração. Só a cruz. 
 ## Só a graça sustenta
 
 O homem não se mantém de pé por esforço próprio. Se mantém pela graça. Dia após dia. A graça não é licença para pecar — é o combustível para viver. E só a Palavra forma, dia após dia, um homem segundo o coração de Deus.
+
+## Conclusão: Volte ao Evangelho Puro
+
+Se você tem buscado em técnicas, métodos ou motivação humana a força para mudar, pare. Volte-se para o evangelho puro e simples de Cristo. Nele está o poder de Deus para salvação e transformação.
+
+**Hoje:** Descanse na graça. Medite na cruz. Alimente-se da Palavra. Só isso transforma.
+
+---
+*Se este conteúdo abençoou sua vida, compartilhe com outro irmão que precisa ouvir esta palavra.*
