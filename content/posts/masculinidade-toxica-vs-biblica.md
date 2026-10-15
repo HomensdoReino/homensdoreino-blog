@@ -1,7 +1,7 @@
 ---
 id: masculinidade-toxica-vs-biblica
 title: "A Diferença Entre Masculinidade Tóxica e Masculinidade Bíblica: O Que a Bíblia Realmente Diz"
-date: "20 de outubro de 2026"
+date: "15 de outubro de 2026"
 excerpt: "O mundo confunde força com dominação. Descubra o que a Bíblia realmente ensina sobre ser um homem segundo o coração de Deus: força, sacrifício e amor."
 img: "/assets/images/masculinidade-biblica.jpg"
 tags:
