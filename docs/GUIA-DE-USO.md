@@ -1,52 +1,39 @@
 # 📘 GUIA DE USO - HOMENS DO REINO
-*Como usar o sistema de posts e recuperação de contexto*
+*Manual operacional do sistema de conteúdo*
 
 ---
 
-## 🚨 SITUAÇÃO 1: Iniciar uma NOVA CONVERSA com o Qwen
+## 🚨 SITUAÇÃO 1: Iniciar uma NOVA conversa com o Qwen
+1. Abra `docs/PROMPT-MESTRE.md` no GitHub.
+2. Copie TODO o conteúdo e cole na PRIMEIRA mensagem da nova conversa.
+3. Aguarde a confirmação "✅ Protocolo v2.0 ativado".
+4. Abra `docs/CALENDARIO-EDITORIAL.md`, localize o post do dia e envie o Comando Mágico preenchido.
+5. Receba o Kit Completo (5 blocos).
 
-Se você perdeu esta conversa ou precisa começar uma nova:
+## 📅 SITUAÇÃO 2: Dia de Publicação (fluxo normal)
+**LinkedIn:**
+1. Abra o HTML no GitHub → botão "Raw" → tire o print (Win+Shift+S / Cmd+Shift+4).
+2. Comprima no TinyPNG. Renomeie para o nome do post (minúsculo, com hífens).
+3. Publique com o texto do Markdown + imagem.
+4. Cole o "PRIMEIRO COMENTÁRIO" imediatamente após publicar.
 
-### Passo 1: Ativar o Protocolo
-1. Abra o arquivo `docs/PROMPT-MESTRE.md` no GitHub
-2. Copie TODO o conteúdo (do início ao fim)
-3. Cole na PRIMEIRA mensagem da nova conversa
-4. Aguarde a confirmação: "✅ Protocolo 'Homens do Reino' ativado..."
+**Blog (GitHub):**
+1. Crie o `.md` em `content/posts/` (use o padrão `versiculo-tema.md` para novos).
+2. Cole o Markdown do Blog.
+3. Suba a imagem em `assets/images/`.
+4. Adicione a linha no `docs/INDICE-POSTS.md`.
+5. Commit e push. Aguarde 2–3 min. Teste com Ctrl+Shift+R.
 
-### Passo 2: Enviar o Comando Mágico
-1. Abra o arquivo `docs/CALENDARIO-EDITORIAL.md`
-2. Localize o post do dia atual
-3. Copie o "Comando Mágico Atualizado" do final do arquivo
-4. Preencha com a data, tema e versículo do dia
-5. Envie ao Qwen
+## 🔎 SITUAÇÃO 3: Encontrar um post rapidamente
+- **Pelo índice:** abra `docs/INDICE-POSTS.md` e use Ctrl+F (por tema, versículo ou pilar).
+- **Pelo GitHub:** dentro da pasta `content/posts/`, pressione `/` e digite o termo.
+- **Busca global:** `Ctrl+K` (ou `Cmd+K`) → ex: `in:content casamento`.
 
-### Passo 3: Receber o Kit Completo
-O Qwen entregará automaticamente:
-- HTML para a imagem
-- Texto para o LinkedIn
-- Texto para o Blog
-- 3 sugestões de imagem do Unsplash
+## ⚠️ REGRAS CRÍTICAS
+1. Nunca repita tema/versículo já publicado (confira o índice).
+2. Nunca sugira nome de imagem já em uso (confira a API).
+3. Nunca use espaços ou maiúsculas em nomes de arquivo.
+4. Sempre comprima imagem antes do upload (evita 404).
+5. Ao publicar, atualize o status no calendário e o índice.
 
----
-
-## 📅 SITUAÇÃO 2: Dia de Publicação (Fluxo Normal)
-
-### No LinkedIn:
-1. Abra o HTML no navegador (ou via "Raw" no GitHub)
-2. Tire um print da imagem (Win+Shift+S ou Cmd+Shift+4)
-3. Comprima no TinyPNG se necessário
-4. Salve como `[versiculo].jpg` (ex: `filipenses-4-8.jpg`)
-5. Publique no LinkedIn com o texto do Markdown
-6. Adicione o primeiro comentário imediatamente após publicar
-
-### No Blog (GitHub):
-1. Crie o arquivo `.md` em `content/posts/` com o nome do ID
-2. Cole o Markdown do Blog
-3. Faça upload da imagem em `assets/images/`
-4. Commit e push
-
----
-
-## 📁 SITUAÇÃO 3: Organização dos Arquivos
-
-### Estrutura do repositório:
+## 📁 ESTRUTURA DO REPOSITÓRIO
